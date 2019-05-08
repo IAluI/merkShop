@@ -1,0 +1,22 @@
+{
+  "name": "merkshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAluI/merkShop.git"
+  },
+  "author": "Ilya Molostov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IAluI/merkShop/issues"
+  },
+  "homepage": "https://github.com/IAluI/merkShop#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
