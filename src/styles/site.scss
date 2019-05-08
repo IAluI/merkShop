@@ -1,0 +1,20 @@
+.clear {
+  clear: both;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.container .container {
+  margin: 0 15px 0 15px;
+  width: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
