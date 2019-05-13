@@ -29,7 +29,7 @@ const paths = {
   },
   images: {
     src: "./src/img/**/*.{jpg,jpeg,png,gif,svg}",
-    dist: "./dist/img/",
+    dist: "./dist/uploaded/images/",
     watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg}"
   },
   scripts: {
@@ -38,7 +38,7 @@ const paths = {
     watch: "./src/js/**/*.js"
   },
   styles: {
-    src: "./src/styles/main.scss",
+    src: ["./src/styles/main.scss", "./src/styles/site.scss"],
     dist: "./dist/styles/",
     watch: "./src/styles/**/*.scss"
   }
