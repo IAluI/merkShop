@@ -1,23 +1,37 @@
 .Advantages {
-
+  padding-top: 30px;
 }
 
 .Advantages-Header {
-
+  font-weight: 700;
 }
 
 .Advantages-CaseRow {
   display: flex;
   justify-content: space-around;
+  padding-top: 30px;
 }
 
 .Advantages-Case {
-  max-width: 400px;
+  width: 30%;
   text-align: center;
 }
 
+.Advantages-CaseImgBox {
+  position: relative;
+  width: 100%;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 25%;
+  }
+}
+
 .Advantages-CaseImg {
-  height: 100px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transform: translate(-50%, 0);
 }
 
 .Advantages-CaseHeader {
@@ -25,8 +39,25 @@
     top: 15px;
     bottom: 15px;
   }
+  font-weight: 300;
 }
 
 .Advantages-CaseText {
+  font-weight: 300;
+}
 
+.Samples {
+  padding-top: 30px;
+}
+
+.Samples-Header {
+  font-weight: 700;
+}
+
+.Location {
+  padding-top: 30px;
+}
+
+.Location-Header {
+  font-weight: 700;
 }
