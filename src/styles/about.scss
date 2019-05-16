@@ -1,13 +1,13 @@
-.Advantages {
-  padding-top: 30px;
+.Advantages, .Samples, .Location {
+  padding-bottom: 40px;
 }
 
-.Advantages-Header {
-  text-align: left;
+.Section-Header {
+  text-align: center;
   font: {
     weight: 700;
-    size: 1.2857em;
-  }
+    size: 0.7142em;
+  };
 }
 
 .Advantages-CaseRow {
@@ -66,23 +66,19 @@
   display: none;
 }
 
-.Samples {
-  padding-top: 30px;
-}
-
-.Samples-Header {
-  font-weight: 700;
-}
-
-.Location {
-  padding-top: 30px;
-}
-
-.Location-Header {
-  font-weight: 700;
-}
-
 @media (min-width: 768px) {
+  .Section-Header {
+    text-align: left;
+    font: {
+      weight: 700;
+      size: 1.2857em;
+    };
+    padding: {
+      top: 40px;
+      bottom: 40px;
+      left: 70px;
+    };
+  }
   .Advantages-CaseHeader {
     display: block;
   }
@@ -99,9 +95,47 @@
   }
 }
 
-/*
-@media (min-width: 768px) {
-  .ServContainer {
-    flex: 0 0 25%;
-  }
-}*/
+.Samples {
+
+}
+
+.Location {
+  background-color: #EAECED;
+}
+
+.Location-CaseRow {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.Location-Case {
+  text-align: center;
+  min-width: 290px;
+}
+
+.Location-CaseImg {
+
+}
+
+.Location-CaseHeader {
+  font: {
+    weight: 400;
+    size: 1.7142em;
+  };
+}
+
+.Location-CaseText {
+  font: {
+    weight: 300;
+    size: 1em;
+  };
+}
+
+.Location-CaseLink {
+  font: {
+    weight: 300;
+    size: 0.7142em;
+  };
+}
