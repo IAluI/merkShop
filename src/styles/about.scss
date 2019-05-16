@@ -3,7 +3,11 @@
 }
 
 .Advantages-Header {
-  font-weight: 700;
+  text-align: left;
+  font: {
+    weight: 700;
+    size: 1.2857em;
+  }
 }
 
 .Advantages-CaseRow {
@@ -23,7 +27,7 @@
   &:before {
     content: '';
     display: block;
-    padding-top: 25%;
+    padding-top: 66%;
   }
 }
 
@@ -39,11 +43,27 @@
     top: 15px;
     bottom: 15px;
   }
-  font-weight: 300;
+  font: {
+    weight: 300;
+    size: 1em;
+  }
+  display: none;
+}
+
+.Advantages-CaseHeaderMobile {
+  padding: 10px 0;
+  font: {
+    weight: 300;
+    size: 0.7143em;
+  }
 }
 
 .Advantages-CaseText {
-  font-weight: 300;
+  font: {
+    weight: 300;
+    size: 0.8571em;
+  };
+  display: none;
 }
 
 .Samples {
@@ -61,3 +81,27 @@
 .Location-Header {
   font-weight: 700;
 }
+
+@media (min-width: 768px) {
+  .Advantages-CaseHeader {
+    display: block;
+  }
+  .Advantages-CaseHeaderMobile {
+    display: none;
+  }
+  .Advantages-CaseText {
+    display: block;
+  }
+  .Advantages-CaseImgBox {
+    &:before {
+      padding-top: 25%;
+    }
+  }
+}
+
+/*
+@media (min-width: 768px) {
+  .ServContainer {
+    flex: 0 0 25%;
+  }
+}*/
