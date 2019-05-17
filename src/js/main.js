@@ -1,3 +1,14 @@
-//= ../../node_modules/jquery/dist/jquery.js
+/*
+ jQuery
+*/
+//= ../../node_modules/jquery/dist/jquery.min.js
 
-//= my.js
+/*
+ Slick
+*/
+//= ../../node_modules/slick-carousel/slick/slick.min.js
+
+/*
+  Common
+*/
+//= common.js
