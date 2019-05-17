@@ -3,6 +3,19 @@
   min-width: 290px;
 }
 
+.Container > section {
+  border-bottom: 4px solid #EAECED;
+}
+
+@media (min-width: 768px) {
+  .Container > section:nth-child(2n) {
+    background-color: #EAECED;
+  }
+  .Container > section {
+    border-bottom: none;
+  }
+}
+
 .Row {
   display: flex;
   flex-wrap: wrap;

@@ -6,14 +6,17 @@
   text-align: center;
   font: {
     weight: 700;
-    size: 0.7142em;
+    size: 0.8571em;
+  };
+  padding: {
+    top: 20px;
   };
 }
 
 .Advantages-CaseRow {
   display: flex;
   justify-content: space-around;
-  padding-top: 30px;
+  padding-top: 25px;
 }
 
 .Advantages-Case {
@@ -79,6 +82,9 @@
       left: 70px;
     };
   }
+  .Advantages-CaseRow {
+    padding-top: 30px;
+  }
   .Advantages-CaseHeader {
     display: block;
   }
@@ -100,19 +106,19 @@
 }
 
 .Location {
-  background-color: #EAECED;
+
 }
 
 .Location-CaseRow {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-top: 20px;
 }
 
 .Location-Case {
   text-align: center;
   min-width: 290px;
+  padding-top: 20px;
 }
 
 .Location-CaseImg {
@@ -121,15 +127,15 @@
 
 .Location-CaseHeader {
   font: {
-    weight: 400;
-    size: 1.7142em;
+    weight: 700;
+    size: 1em;
   };
 }
 
 .Location-CaseText {
   font: {
     weight: 300;
-    size: 1em;
+    size: 0.8571em;
   };
 }
 
@@ -138,4 +144,65 @@
     weight: 300;
     size: 0.7142em;
   };
+}
+
+@media (min-width: 768px) {
+  .Location-CaseHeader {
+    font: {
+      size: 1.7142em;
+    };
+  }
+  .Location-CaseText {
+    font: {
+      size: 1em;
+    };
+  }
+  .Location-CaseLink {
+    font: {
+      size: 0.7142em;
+    };
+  }
+}
+
+.Dealers {
+
+}
+
+.Callback {
+  text-align: center;
+}
+
+.Callback-Img {
+
+}
+
+.Callback-Text {
+  font: {
+    size: 0.8571em;
+    weight: 300;
+  };
+}
+
+.Callback-Button {
+  font: {
+    size: 0.7143em;
+    weight: 300;
+  };
+  margin: 25px;
+  padding: 10px 20px;
+}
+
+@media (min-width: 768px) {
+  .Callback-Text {
+    font: {
+      size: 1.7143em;
+      weight: 300;
+    };
+  }
+  .Callback-Button {
+    font: {
+      size: 1em;
+      weight: 300;
+    };
+  }
 }
