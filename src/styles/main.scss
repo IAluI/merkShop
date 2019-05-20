@@ -1,1 +1,67 @@
-@import "my";
+.Container {
+  width: 100%;
+  min-width: 290px;
+}
+
+.Container > section {
+  border-bottom: 4px solid #EAECED;
+}
+
+@media (min-width: 768px) {
+  .Container > section:nth-child(2n) {
+    background-color: #EAECED;
+  }
+  .Container > section {
+    border-bottom: none;
+  }
+}
+
+.Row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Callback {
+  text-align: center;
+}
+
+.Callback-Img {
+
+}
+
+.Callback-Text {
+  font: {
+    size: 0.8571em;
+    weight: 700;
+  };
+}
+
+.Callback-Button {
+  font: {
+    size: 0.7143em;
+    weight: 300;
+  };
+  margin: 25px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  background-color: #71E2FF;
+  transition: all 0.3s ease;
+}
+
+.Callback-Button:hover {
+  background-color: white;
+  border-color: grey;
+}
+
+@media (min-width: 768px) {
+  .Callback-Text {
+    font: {
+      size: 1.7143em;
+    };
+  }
+  .Callback-Button {
+    font: {
+      size: 1em;
+    };
+  }
+}

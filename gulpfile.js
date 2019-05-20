@@ -38,7 +38,7 @@ const paths = {
     watch: "./src/js/**/*.js"
   },
   styles: {
-    src: ["./src/styles/main.scss", "./src/styles/site.scss"],
+    src: ["./src/styles/main.scss", "./src/styles/site.scss", "./src/styles/p_*.scss"],
     dist: "./dist/styles/",
     watch: "./src/styles/**/*.scss"
   }
