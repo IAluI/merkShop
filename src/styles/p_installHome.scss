@@ -1,0 +1,55 @@
+.TopNav {
+  position: relative;
+  padding: {
+    top: 30px
+  };
+}
+
+.TopNav-NavList {
+  list-style-type: none;
+  font: {
+    size: 12px;
+  };
+  line-height: 1.5em;
+  column-count: 2;
+}
+
+.TopNav-NavList > li {
+  position: relative;
+  margin: {
+    left: 130px;
+  };
+}
+
+.TopNav-NavList > li:before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: -1.5em;
+  width: 10px;
+  height: 10px;
+  border: {
+    radius: 5px;
+  };
+  background: {
+    color: #75D404;
+  }
+}
+
+.TopNav-Img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.TopNav-Img:first-child {
+  left: 0;
+}
+
+.TopNav-Img:last-child {
+  left: 50%;
+}
+
+.TopNav-Img > img {
+  height: 100%;
+}
