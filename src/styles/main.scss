@@ -21,6 +21,43 @@
   flex-wrap: wrap;
 }
 
+.SectionHeader {
+  text-align: center;
+  font: {
+    weight: 700;
+    size: 0.8571em;
+  };
+  padding: {
+    top: 20px;
+    bottom: 10px;
+  };
+}
+
+.SectionHeader > a {
+  color: black;
+  text-decoration: none;
+}
+
+.SectionHeader > a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .SectionHeader {
+    text-align: left;
+    font: {
+      weight: 700;
+      size: 1.2857em;
+    };
+    padding: {
+      top: 40px;
+      bottom: 40px;
+      left: 70px;
+    };
+  }
+}
+
 .Callback {
   text-align: center;
 }
