@@ -24,7 +24,7 @@
 .TopNav-NavList > li:before {
   content: "";
   position: absolute;
-  top: 0.2em;
+  top: 0.3em;
   left: -1.5em;
   width: 10px;
   height: 10px;
@@ -38,7 +38,7 @@
 
 .TopNav-Img {
   position: absolute;
-  top: 0;
+  //top: 0;
   bottom: 0;
 }
 
@@ -51,5 +51,5 @@
 }
 
 .TopNav-Img > img {
-  height: 100%;
+  height: 130px;
 }
