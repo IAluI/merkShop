@@ -10,7 +10,7 @@ $(document).ready(function() {
     prevArrow: $('.Dealers-SliderArrow:first-child > img'),
     nextArrow: $('.Dealers-SliderArrow:last-child > img'),
     dots: true,
-    autoplay: false,
+    autoplay: true,
     mobileFirst: true,
     responsive: [{
       breakpoint: 1200,

@@ -147,3 +147,50 @@
     height: 130px;
   }
 }
+
+.StdInstall {
+
+}
+
+.StdInstall-Case {
+
+}
+
+.StdInstall-CaseHeader {
+  display: none;
+ font: {
+   weight: 400;
+ }
+}
+
+.StdInstall-CaseHeaderImp {
+  font: {
+    weight: 400;
+  }
+}
+
+.StdInstall-CaseHeaderImp > span {
+  font: {
+    weight: 700;
+  };
+  color: #30CBF2;
+}
+
+.StdInstall-CasePrices td:first-child:before {
+  content: "-";
+}
+
+.StdInstall-CasePrices td:first-child:after {
+  content: " ";
+  white-space: pre;
+}
+
+.StdInstall-CaseImg {
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .StdInstall-CaseHeader {
+    display: inline;
+  }
+}
