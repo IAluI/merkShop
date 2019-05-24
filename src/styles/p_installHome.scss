@@ -190,3 +190,32 @@
     display: inline;
   }
 }
+
+.UnStdInstall {
+  overflow: hidden;
+}
+
+.UnStdInstall-Case {
+  text-align: center;
+  display: inline-block;
+}
+
+.UnStdInstall-Case > img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .UnStdInstall-Cases {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .UnStdInstall-Case {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .UnStdInstall-Case {
+    flex: 0 0 33.33%;
+  }
+}
