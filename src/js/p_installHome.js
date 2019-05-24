@@ -10,12 +10,12 @@ $(document).ready(function() {
       {
         breakpoint: 575,
         settings: {
-          slidesToShow: ($('.StdInstall-CaseImg').children().length - 1)
+          slidesToShow: 2
         }
       }, {
         breakpoint: 1023,
         settings: {
-          slidesToShow: $('.StdInstall-CaseImg').children().length,
+          slidesToShow: 3,
           dots: false
         }
       }
