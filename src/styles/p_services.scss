@@ -1,22 +1,23 @@
 .Services {
-  padding-top: 1rem;
-  padding-bottom: 4rem;
+  //padding-top: 1em;
+  padding-bottom: 4em;
 }
 
 .ServContainer {
   flex: 0 0 50%;
+  margin-top: 1em;
+  text-align: center;
 }
 
 .ServContainer-Link {
-  color: #808080;
+
 }
 
 .ServContainer-Img {
-  display: block;
-  margin: auto;
   border-radius: 5px;
   border: 3px solid transparent;
-  width: 80%;
+  width: 95%;
+  transition: border 0.3s ease-in-out;
   &:hover {
     border: 3px solid #30cbf2;
   }
@@ -25,7 +26,7 @@
 .ServContainer-Text {
   display: block;
   color: black;
-  text-align: center;
+  margin-top: 1em;
 }
 
 @media (min-width: 576px) {
@@ -41,11 +42,9 @@
 }
 
 .OurWorks {
-  padding: 50px 0px 50px;
+  padding: 4em 0 4em;
   text-align: center;
   background: #e9eef2;
-  font-family: ubuntu, sans-seriff;
-  font-size: 18px;
 }
 
 .OurWorks-Background {

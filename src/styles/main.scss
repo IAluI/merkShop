@@ -1,10 +1,46 @@
 .Container {
   width: 100%;
   min-width: 290px;
+  font: {
+    size: 12px;
+  }
+}
+
+@media (min-width: 576px) {
+  .Container {
+    font: {
+      size: 13px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .Container {
+    font: {
+      size: 14px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .Container {
+    font: {
+      size: 15px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .Container {
+    font: {
+      size: 16px;
+    }
+  }
 }
 
 .Container > section {
   border-bottom: 4px solid #EAECED;
+  padding-bottom: 3em;
 }
 
 @media (min-width: 768px) {
@@ -16,6 +52,16 @@
   }
 }
 
+/*.Container p {
+  margin-bottom: 0.75em;
+}*/
+
+/*.Container ul, ol {
+  list-style: {
+    position: inside;
+  }
+}*/
+
 .Row {
   display: flex;
   flex-wrap: wrap;
@@ -25,11 +71,11 @@
   text-align: center;
   font: {
     weight: 700;
-    size: 0.8571em;
+    size: 1.5em;
   };
   padding: {
-    top: 20px;
-    bottom: 10px;
+    top: 1em;
+    bottom: 0.5em;
   };
 }
 
@@ -46,14 +92,13 @@
 @media (min-width: 768px) {
   .SectionHeader {
     text-align: left;
-    font: {
-      weight: 700;
+    /*font: {
       size: 1.2857em;
-    };
+    };*/
     padding: {
-      top: 40px;
-      bottom: 40px;
-      left: 70px;
+      top: 1em;
+      bottom: 1em;
+      left: 2em;
     };
   }
 }
@@ -68,18 +113,18 @@
 
 .Callback-Text {
   font: {
-    size: 0.8571em;
+    size: 1.5em;
     weight: 700;
   };
 }
 
 .Callback-Button {
   font: {
-    size: 0.7143em;
+    size: 1em;
     weight: 300;
   };
-  margin: 25px;
-  padding: 10px 20px;
+  margin: 2em;
+  padding: 1em 2em;
   border: 2px solid black;
   background-color: #71E2FF;
   transition: all 0.3s ease;
@@ -88,25 +133,26 @@
 .Callback-Button:hover {
   background-color: white;
   border-color: grey;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .Callback-Text {
     font: {
-      size: 1.7143em;
+      size: 2em;
     };
   }
   .Callback-Button {
-    font: {
+    /*font: {
       size: 1em;
-    };
+    };*/
   }
 }
 
 .slick-dots {
   text-align: center;
   margin: {
-    top: 10px;
+    top: 0.75em;
   };
 }
 

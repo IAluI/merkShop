@@ -1,14 +1,14 @@
 .TopNav {
   padding: {
-    top: 15px
+    top: 1em;
   };
 }
 
 .TopNav-NavList {
   list-style-type: none;
-  font: {
+  /*font: {
     size: 10px;
-  };
+  };*/
   line-height: 1.5em;
 }
 
@@ -41,8 +41,8 @@
   padding: {
     right: 5%;
     left: 2%;
-    top: 5px;
-    bottom: 5px;
+    /*top: 5px;
+    bottom: 5px;*/
   }
   text-decoration: none;
   color: black;
@@ -51,6 +51,11 @@
   };
   //margin-right: 1.5em;
   //overflow: hidden;
+  padding: {
+    top: 0.25em;
+    bottom: 0.25em;
+  };
+  min-height: 2em;
 }
 
 .TopNav-NavList > li > a:after {
@@ -75,13 +80,13 @@
   .TopNav {
     position: relative;
     padding: {
-      top: 30px
+      top: 2em;
     };
   }
   .TopNav-NavList {
-    font: {
+    /*font: {
       size: 12px;
-    };
+    };*/
     column-count: 2;
   }
   .TopNav-NavList > li {
@@ -97,12 +102,12 @@
   .TopNav-NavList > li:before {
     content: "";
     position: absolute;
-    top: 0.75em;
-    left: -1.5em;
-    width: 10px;
-    height: 10px;
+    top: 0.55em;
+    left: -1.25em;
+    width: 0.76em;
+    height: 0.76em;
     border: {
-      radius: 5px;
+      radius: 0.38em;
     };
     background: {
       color: #75D404;
@@ -152,6 +157,13 @@
 
 }
 
+.StdInstall-CaseHead {
+  font: {
+    size: 1.25em;
+  };
+  margin-bottom: 0.75em;
+}
+
 .StdInstall-CaseHeader {
   display: none;
  font: {
@@ -195,6 +207,10 @@
   overflow: hidden;
 }
 
+.UnStdInstall-Cases {
+  margin-bottom: 0.75em;
+}
+
 .UnStdInstall-Case {
   text-align: center;
   display: inline-block;
@@ -202,6 +218,9 @@
 
 .UnStdInstall-Case > img {
   width: 100%;
+}
+.UnStdInstall-Case > h4 {
+  padding: 0 0.5em;
 }
 
 @media (min-width: 768px) {
@@ -218,4 +237,34 @@
   .UnStdInstall-Case {
     flex: 0 0 33.33%;
   }
+}
+
+.Prices > table {
+  border-collapse: collapse;
+  line-height: 1.5em;
+  width: 100%;
+  margin-bottom: 0.75em;
+}
+
+.Prices td, th {
+  border: 1px solid black;
+  padding: 0.25em;
+}
+
+.TwoStepInstall > ul, ol {
+  margin-left: 3em;
+}
+
+.BuyAndInstall-Img {
+  float: left;
+  margin: 1em 2em;
+}
+
+.YoursEqipInstall > ul, ol {
+  margin-left: 3em;
+}
+
+.BadInstall-Img {
+  display: block;
+  margin: auto;
 }

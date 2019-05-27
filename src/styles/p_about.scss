@@ -1,15 +1,15 @@
-.Advantages, .Samples, .Location, .Dealers, .Callback {
+/*.Advantages, .Samples, .Location, .Dealers, .Callback {
   padding-bottom: 40px;
-}
+}*/
 
 .Advantages-CaseRow {
   display: flex;
   justify-content: space-around;
-  padding-top: 25px;
+  /*padding-top: 1.5em;*/
 }
 
 .Advantages-Case {
-  width: 30%;
+  flex: 0 0 33%;
   text-align: center;
 }
 
@@ -30,37 +30,38 @@
   transform: translate(-50%, 0);
 }
 
-.Advantages-CaseHeader {
+.Advantages-Case > .Advantages-CaseHeader {
   padding: {
-    top: 15px;
-    bottom: 15px;
+    top: 1em;
+    bottom: 1em;
   }
   font: {
     weight: 300;
-    size: 1em;
+    size: 1.25em;
   }
   display: none;
 }
 
-.Advantages-CaseHeaderMobile {
-  padding: 10px 0;
+.Advantages-Case > .Advantages-CaseHeaderMobile {
+  padding: 1em 0;
   font: {
     weight: 300;
-    size: 0.7143em;
+    size: 1em;
   }
 }
 
 .Advantages-CaseText {
   font: {
     weight: 300;
-    size: 0.8571em;
+    size: 1em;
   };
   display: none;
+  margin: 0.75em 0;
 }
 
 @media (min-width: 768px) {
   .Advantages-CaseRow {
-    padding-top: 30px;
+    /*padding-top: 2em;*/
   }
   .Advantages-CaseHeader {
     display: block;
@@ -95,7 +96,8 @@
 .Location-Case {
   text-align: center;
   min-width: 290px;
-  padding-top: 20px;
+  padding-top: 1.5em;
+  line-height: 1.5em;
 }
 
 .Location-CaseImg {
@@ -112,32 +114,32 @@
 .Location-CaseText {
   font: {
     weight: 300;
-    size: 0.8571em;
+    size: 1em;
   };
 }
 
 .Location-CaseLink {
   font: {
     weight: 300;
-    size: 0.7142em;
+    size: 1em;
   };
 }
 
 @media (min-width: 768px) {
   .Location-CaseHeader {
     font: {
-      size: 1.7142em;
+      size: 1.5em;
     };
   }
   .Location-CaseText {
-    font: {
-      size: 1em;
-    };
+    /*font: {
+      size: 1.25em;
+    };*/
   }
   .Location-CaseLink {
-    font: {
-      size: 0.7142em;
-    };
+    /*font: {
+      size: 1.25em;
+    };*/
   }
 }
 
@@ -157,8 +159,9 @@
 }
 
 .Dealers-SliderArrow {
-  flex: 0 0 7px;
-  padding: 0 7px;
+  display: none;
+  /*flex: 0 0 1.5em;
+  padding: 0 0.5em;*/
 }
 
 .Dealers-SliderArrow > img {
@@ -222,8 +225,9 @@
 
 @media (min-width: 768px) {
   .Dealers-SliderArrow {
-    flex: 0 0 30px;
-    padding: 0 15px;
+    display: block;
+    flex: 0 0 2em;
+    padding: 0 1em;
   }
   .Dealers-SliderItem {
     height: 160px;
