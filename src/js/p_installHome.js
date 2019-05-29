@@ -54,7 +54,6 @@ $(document).ready(function() {
           }
         ]
       }, true);
-      console.log(slickInit)
     };
 
     root.on('destroy', function(){
@@ -62,8 +61,6 @@ $(document).ready(function() {
     });
     slickInit();
     $(window).resize($.debounce(250, function () {
-      console.log(isDestroyed);
-      console.log(media.matches);
       if (media.matches && isDestroyed) {
         slickInit();
         isDestroyed = false;
