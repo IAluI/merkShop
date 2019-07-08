@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp",
-    "prod": "NODE_ENV=production gulp build",
+    "prod": "set NODE_ENV=production && gulp build",
     "clearCache": "gulp clearCache"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "gulp-cache": "^1.1.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
+    "gulp-pug": "^4.0.1",
     "gulp-rigger": "^0.5.8",
     "gulp-rimraf": "^0.2.2",
     "gulp-sass": "^4.0.2",

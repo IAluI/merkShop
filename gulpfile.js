@@ -1,18 +1,33 @@
 'use strict';
 
-const gulp = require('gulp'), // подключаем Gulp
-  browserSync = require('browser-sync'), // сервер для работы и автоматического обновления страниц
-  rigger = require('gulp-rigger'), // модуль для импорта содержимого одного файла в другой
-  sourcemaps = require('gulp-sourcemaps'), // модуль для генерации карты исходных файлов
-  sass = require('gulp-sass'), // модуль для компиляции SASS (SCSS) в CSS
-  autoprefixer = require('gulp-autoprefixer'), // модуль для автоматической установки автопрефиксов
-  uglify = require('gulp-uglify'), // модуль для минимизации JavaScript
-  cache = require('gulp-cache'), // модуль для кэширования
-  imagemin = require('gulp-imagemin'), // плагин для сжатия PNG, JPEG, GIF и SVG изображений
-  jpegrecompress = require('imagemin-jpeg-recompress'), // плагин для сжатия jpeg
-  pngquant = require('imagemin-pngquant'), // плагин для сжатия png
-  rimraf = require('gulp-rimraf'), // плагин для удаления файлов и каталогов
-  gulpIf = require('gulp-if');
+const gulp = require('gulp');
+
+// Модуль для условного управления потоком
+const gulpIf = require('gulp-if');
+// плагин для удаления файлов и каталогов
+const rimraf = require('gulp-rimraf');
+// модуль для кэширования
+const cache = require('gulp-cache');
+// сервер для работы и автоматического обновления страниц
+const browserSync = require('browser-sync').create();
+// модуль для импорта содержимого одного файла в другой
+const rigger = require('gulp-rigger');
+// html препроцессор
+const pug = require('gulp-pug');
+// модуль для генерации карты исходных файлов
+const sourcemaps = require('gulp-sourcemaps');
+// модуль для компиляции SASS (SCSS) в CSS
+const sass = require('gulp-sass');
+// модуль для автоматической установки автопрефиксов
+const autoprefixer = require('gulp-autoprefixer');
+// модуль для минимизации JavaScript
+const uglify = require('gulp-uglify');
+// плагин для сжатия PNG, JPEG, GIF и SVG изображений
+const imagemin = require('gulp-imagemin');
+// плагин для сжатия jpeg
+const jpegrecompress = require('imagemin-jpeg-recompress');
+// плагин для сжатия png
+const pngquant = require('imagemin-pngquant');
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
@@ -21,6 +36,11 @@ const paths = {
     src: ["./src/pages/*.html", "!./src/pages/t_*.html"],
     dist: "./dist/pages/",
     watch: "./src/pages/*.html"
+  },
+  pug: {
+    src: ["./src/pages/*.pug"],
+    dist: "./dist/pages/",
+    watch: "./src/pages/*.pug"
   },
   fonts: {
     src: "./src/fonts/**/*.{ttf,otf,woff,woff2}",
@@ -44,6 +64,15 @@ const paths = {
   }
 };
 
+gulp.task('clearCache', () => {
+  cache.clearAll();
+});
+
+gulp.task('clean', () => {
+  return gulp.src('/dist', { read: false, allowEmpty: true })
+    .pipe(rimraf());
+});
+
 const autoprefixerList = [
   'Chrome >= 45',
   'Firefox ESR',
@@ -55,73 +84,73 @@ const autoprefixerList = [
   'Opera >= 30'
 ];
 
-gulp.task('pages', function () {
+gulp.task('pages', () => {
   return gulp.src(paths.pages.src)
-    .pipe(rigger()) // импорт вложений
+    .pipe(rigger())
     .pipe(gulp.dest(paths.pages.dist))
-    .pipe(browserSync.reload({ stream: true })); // перезагрузим сервер
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('fonts', function () {
+gulp.task('pug', () => {
+  return gulp.src(paths.pug.src)
+    .pipe(pug({pretty: true}))
+    .pipe(gulp.dest(paths.pug.dist))
+    .pipe(browserSync.reload({ stream: true }))
+});
+
+gulp.task('fonts', () => {
   return gulp.src(paths.fonts.src)
     .pipe(gulp.dest(paths.fonts.dist))
-    .pipe(browserSync.reload({ stream: true })); // перезагрузим сервер
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('images', function () {
-  /*gulp.src(paths.images.src)
-    .pipe(gulp.dest(paths.images.dist))*/
-  return gulp.src(paths.images.src) // путь с исходниками картинок
-    .pipe(cache(imagemin([ // сжатие изображений
-      imagemin.gifsicle({ interlaced: true }),
+gulp.task('images', () => {
+  return gulp.src(paths.images.src)
+    .pipe(cache(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
       jpegrecompress({
-        progressive: true,
-        max: 90,
-        min: 80
+        loops: 5,
+        min: 70,
+        max: 75,
+        quality: 'medium'
       }),
-      pngquant(),
-      imagemin.svgo({ plugins: [{ removeViewBox: false }] })
+      imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
+      imagemin.optipng({optimizationLevel: 3}),
+      pngquant({quality: '70-75', speed: 5})
     ])))
-    .pipe(gulp.dest(paths.images.dist)) // выгрузка готовых файлов
-    .pipe(browserSync.reload({ stream: true })); // перезагрузим сервер
+    .pipe(gulp.dest(paths.images.dist))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function () {
+gulp.task('scripts', () => {
   return gulp.src(paths.scripts.src)
-    .pipe(rigger()) // импортируем все указанные файлы в main.js
+    .pipe(rigger())
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     .pipe(gulpIf(isDevelopment, uglify()))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulp.dest(paths.scripts.dist))
-    .pipe(browserSync.reload({ stream: true })); // перезагрузим сервер
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('styles', function () {
+gulp.task('styles', () => {
   return gulp.src(paths.styles.src)
     .pipe(sass())
-    .pipe(autoprefixer({ // добавим префиксы
+    .pipe(autoprefixer({
       browsers: autoprefixerList
     }))
     .pipe(gulp.dest(paths.styles.dist))
-    .pipe(browserSync.reload({ stream: true })); // перезагрузим сервер
+    .pipe(browserSync.stream());
 });
 
-gulp.task('clean', function () {
-  return gulp.src('/dist', { read: false, allowEmpty: true })
-    .pipe(rimraf());
-});
-
-gulp.task('clearCache', function () {
-  cache.clearAll();
-});
-
-gulp.task('webserver', function () {
+gulp.task('webserver', () => {
   browserSync.init({
     server: "./dist/",
     port: 4000
   });
 
   gulp.watch(paths.pages.watch, gulp.series('pages'));
+  gulp.watch(paths.pug.watch, gulp.series('pug'));
   gulp.watch(paths.styles.watch, gulp.series('styles'));
   gulp.watch(paths.scripts.watch, gulp.series('scripts'));
   gulp.watch(paths.images.watch, gulp.series('images'));
@@ -136,7 +165,8 @@ gulp.task('build',
       'images',
       'scripts',
       'styles'
-    )
+    ),
+    'pug'
   )
 );
 
