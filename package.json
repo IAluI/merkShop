@@ -21,6 +21,7 @@
   "homepage": "https://github.com/IAluI/merkShop#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-cache": "^1.1.1",
@@ -30,7 +31,6 @@
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-rigger": "^0.5.8",
-    "gulp-rimraf": "^0.2.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-tap": "^1.0.1",

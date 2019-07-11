@@ -12,7 +12,7 @@ const rename = require("gulp-rename");
 // Модуль для условного управления потоком
 const gulpIf = require('gulp-if');
 // плагин для удаления файлов и каталогов
-const rimraf = require('gulp-rimraf');
+const del = require('del');
 // модуль для кэширования
 const cache = require('gulp-cache');
 // сервер для работы и автоматического обновления страниц
@@ -82,8 +82,9 @@ gulp.task('clearCache', () => {
 });
 
 gulp.task('clean', () => {
-  return gulp.src('/dist', { read: false, allowEmpty: true })
-    .pipe(rimraf());
+  return del([
+    './dist/**/*'
+  ]);
 });
 
 const autoprefixerList = [
