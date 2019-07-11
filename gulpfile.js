@@ -1,11 +1,14 @@
 'use strict';
 
 const gulp = require('gulp');
+const fs = require("fs");
 
+//
 const tap = require('gulp-tap');
-
+// Модуль для замены текста в файлах
 const replace = require('gulp-replace');
-
+// Модуль для переименования фалов
+const rename = require("gulp-rename");
 // Модуль для условного управления потоком
 const gulpIf = require('gulp-if');
 // плагин для удаления файлов и каталогов
@@ -41,10 +44,16 @@ const paths = {
     dist: "./dist/pages/",
     watch: "./src/pages/*.html"
   },
+  pugTemplate: {
+    src: ["./src/pages/dt_*.pug"],
+    pageDir: "./src/pages/",
+    dist: "./src/pages/",
+    watch: "./src/pages/dt_*.pug"
+  },
   pug: {
-    src: ["./src/pages/*.pug"],
+    src: ["./src/pages/*.pug", "!./src/pages/{t,dt}_*.pug"],
     dist: "./dist/pages/",
-    watch: "./src/pages/*.pug"
+    watch: "./src/pages/p_*.pug"
   },
   fonts: {
     src: "./src/fonts/**/*.{ttf,otf,woff,woff2}",
@@ -95,21 +104,44 @@ gulp.task('pages', () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task('pugTemplate', () => {
+  // Получаем массив содержащий имена pug-файлов без расширения для которых необходимо реализовать динамический include
+  const pageList = fs.readdirSync(paths.pugTemplate.pageDir);
+  let pugList = [];
+  pageList.forEach((item, i, arr) => {
+    if (/^p_.*\.pug/.test(item)) {
+      pugList.push(item.substr(0, item.length - 4));
+    }
+  });
+  return gulp.src(paths.pugTemplate.src)
+    .pipe(replace(/^(\s*)include=[ ](.*?(\$nameMask\$)\..*?)$/gm, (str, indent, dynPath, nameMask, offset, s) => {
+      let dynInclude = indent + 'case _nameMask_';
+      pugList.forEach((item, i, arr) => {
+        dynInclude += indent + "  when '" + item + "'";
+        dynInclude += indent + "    include " + dynPath.replace(nameMask, item);
+      });
+      return dynInclude;
+    }))
+    .pipe(rename(function (path) {
+      path.basename = path.basename.substr(1);
+    }))
+    .pipe(gulp.dest(paths.pugTemplate.dist));
+});
+
 gulp.task('pug', () => {
   return gulp.src(paths.pug.src)
     .pipe(tap((file, t) => {
-      //console.log(file.path);
-      const nameMask = file.path.match(/.*\\(.*?).pug$/)[1].replace('t_', 'p_');
-      t.through(replace, ['$nameMask$', nameMask]);
-    }))
-    .pipe(pug({
-      pretty: true,
-      locals: {
-        _isDevelopment_: isDevelopment
-      }
+      const nameMask = file.path.match(/.*\\(.*?).pug$/)[1];
+      t.through(pug, [{
+        pretty: true,
+        locals: {
+          _isDevelopment_: isDevelopment,
+          _nameMask_: nameMask
+        }
+      }]);
     }))
     .pipe(gulp.dest(paths.pug.dist))
-    .pipe(browserSync.reload({ stream: true }))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('fonts', () => {
@@ -164,6 +196,7 @@ gulp.task('webserver', () => {
   });
 
   gulp.watch(paths.pages.watch, gulp.series('pages'));
+  gulp.watch(paths.pugTemplate.watch, gulp.series('pugTemplate', 'pug'));
   gulp.watch(paths.pug.watch, gulp.series('pug'));
   gulp.watch(paths.styles.watch, gulp.series('styles'));
   gulp.watch(paths.scripts.watch, gulp.series('scripts'));
@@ -180,6 +213,7 @@ gulp.task('build',
       'scripts',
       'styles'
     ),
+    'pugTemplate',
     'pug'
   )
 );
