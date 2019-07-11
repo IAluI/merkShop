@@ -4,6 +4,8 @@ const gulp = require('gulp');
 
 const tap = require('gulp-tap');
 
+const replace = require('gulp-replace');
+
 // Модуль для условного управления потоком
 const gulpIf = require('gulp-if');
 // плагин для удаления файлов и каталогов
@@ -97,12 +99,14 @@ gulp.task('pug', () => {
   return gulp.src(paths.pug.src)
     .pipe(tap((file, t) => {
       //console.log(file.path);
-      t.through(pug, [{
-        pretty: true,
-        locals: {
-          _fileName_: file.path
-        }
-      }]);
+      const nameMask = file.path.match(/.*\\(.*?).pug$/)[1].replace('t_', 'p_');
+      t.through(replace, ['$nameMask$', nameMask]);
+    }))
+    .pipe(pug({
+      pretty: true,
+      locals: {
+        _isDevelopment_: isDevelopment
+      }
     }))
     .pipe(gulp.dest(paths.pug.dist))
     .pipe(browserSync.reload({ stream: true }))

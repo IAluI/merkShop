@@ -1,0 +1,31 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width', initial-scale='1', shrink-to-fit='no')
+    script(type='text/javascript', src='../js/main.js')
+    link(rel='stylesheet', type='text/css', href='../styles/site.css')
+    //- Интеграция стилей в режими разработки
+    if _isDevelopment_
+      link(rel='stylesheet', type='text/css', href='../styles/main.css')
+      link(rel='stylesheet', type='text/css', href='../styles/$nameMask$.css')
+    title Монтаж систем кондиционирования
+body(id='content')
+  div.container.clear
+    div.container
+      //- Интеграция стилей в режими продакшена
+      if !_isDevelopment_
+        style(type='text/css')
+          include ../../dist/styles/main.css
+          include ../../dist/styles/$nameMask$.css
+
+      //- h1 #{_fileName_}
+      h1 Hellow!
+      h1= _isDevelopment_
+
+      //- Интеграция скрипта в зависимости от режима
+      if _isDevelopment_
+        script(type='text/javascript', src='../js/$nameMask$.js')
+      else
+        script(type='text/javascript')
+          include ../../dist/js/$nameMask$.js
