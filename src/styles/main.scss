@@ -1,9 +1,18 @@
+.container > h1:first-child {
+  display: none;
+}
+
+#content > .divider {
+  display: none;
+}
+
 .Container {
   width: 100%;
   min-width: 290px;
   font: {
     size: 12px;
   }
+  line-height: 1.5em;
 }
 
 @media (min-width: 576px) {
@@ -38,7 +47,7 @@
   }
 }
 
-.Container > section {
+/*.Container > section {
   border-bottom: 4px solid #EAECED;
   padding-bottom: 3em;
 }
@@ -50,7 +59,7 @@
   .Container > section {
     border-bottom: none;
   }
-}
+}*/
 
 /*.Container p {
   margin-bottom: 0.75em;

@@ -1,0 +1,386 @@
+.Container {
+  --icon-color: #000;
+}
+
+.PageNav {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-bottom: solid 2px #e8e8e8;
+  --main-color: #000000;
+}
+
+.PageNav-Link {
+  //flex: 0 0 25%;
+  flex: 0 0 50%;
+  padding-bottom: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    --icon-color: #30CBF2;
+    text-decoration: underline;
+  }
+}
+
+.PageNav-LinkImg {
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5em;
+  height: 3.125em;
+}
+
+.PageNav-LinkText {
+  color: black;
+  font-size: 0.875em;
+  display: block;
+  //padding: 0 2em;
+}
+
+@media (min-width: 576px) {
+  .PageNav-Link {
+    flex: 0 0 25%;
+  }
+}
+
+.SerAndRepSection {
+  border-bottom: solid 2px #e8e8e8;
+}
+
+.SerAndRepSection-Header > a {
+  color: black;
+  text-decoration: none;
+}
+
+.SerAndRepSection-Header > a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+
+.SerAndRepSection-Header {
+  font: {
+    size: 1.375em;
+    weight: 300;
+  };
+  padding: {
+    top: 1.6363em;
+    bottom: 1.6363em;
+    left: 13%;
+  }
+}
+
+.SerAndRepSection-Paragraph {
+  font-weight: 300;
+  //line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.WhyService {
+  position: relative;
+}
+
+.WhyService-Bg {
+  position: absolute;
+  top: 6em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.3;
+  /*background: {
+    image: url("/uploaded/images/bg_disease.svg");
+    repeat: no-repeat;
+    size: 39.375em;
+    position: 100% top;
+  }*/
+}
+
+.WhyService-BgImg1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 39.375em;
+}
+
+.WhyService-Content {
+
+}
+
+.WhyService-FirstColumn {
+  flex: 0 0 100%;
+  text-align: left;
+  box-sizing: border-box;
+  //padding-left: 10.57%;
+}
+
+.WhyService-SecondColumn {
+  /*flex: 0 0 40%;
+  text-align: center;
+  margin: {
+    top: 18.5em;
+    left: 5%;
+    right: 5%;
+  };
+  box-sizing: border-box;
+  padding-right: 6.125em;*/
+}
+
+.WhyService-Footer {
+  border-top: solid 2px #e8e8e8;
+  padding: 2.75em 0;
+}
+
+.WhyService-FooterText {
+  text-align: center;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .WhyService-FirstColumn {
+    padding-left: 10.57%;
+    padding-right: 10.57%;
+  }
+  .WhyService-Footer {
+    padding: 2.75em 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .WhyService-FirstColumn {
+    flex: 0 0 66%;
+    //padding-left: 10.57%;
+    padding-right: 0;
+  }
+  .WhyService-Bg {
+    opacity: 1;
+  }
+  .WhyService-SecondColumn {
+  }
+  .WhyService-Footer {
+    padding: 2.75em 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .WhyService-FirstColumn {
+    flex: 0 0 50%;
+  }
+}
+
+.PeriodService {
+  position: relative;
+  border-bottom: solid 2px #71e2ff;;
+}
+
+.PeriodService-Bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.3;
+  background: {
+    image: url("/uploaded/images/bg_sevice.svg");
+    repeat: no-repeat;
+    //size: 32.8125em;
+    size: 28.8125em;
+    position: 100% 5%;
+  }
+}
+
+.PeriodService-Content {
+
+}
+
+.PeriodService-FirstColumn {
+  flex: 0 0 100%;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.PeriodService-SecondColumn {
+  /*flex: 0 0 50%;
+  box-sizing: border-box;
+  padding-right: 10.57%;*/
+}
+
+.PeriodService-Footer {
+  border-top: solid 2px #71e2ff;
+  padding: 2.75em 0;
+}
+
+.PeriodService-FooterText {
+  text-align: center;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .PeriodService-FirstColumn {
+    padding-left: 10.57%;
+    padding-right: 10.57%;
+  }
+  .PeriodService-Footer {
+    padding: 2.75em 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .PeriodService-Bg {
+    opacity: 1;
+  }
+  .PeriodService-FirstColumn {
+    flex: 0 0 60%;
+    padding-left: 10.57%;
+    padding-right: 0;
+  }
+  .PeriodService-Footer {
+    padding: 2.75em 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .PeriodService-FirstColumn {
+    flex: 0 0 50%;
+  }
+}
+
+.ServicePrice {
+  padding-bottom: 3.1875em;
+}
+
+.ServicePrice-Content {
+  padding: 0 10.57%;
+}
+
+.ServicePrice-Offers {
+  padding: 0 10.57%;
+  justify-content: space-between;
+}
+
+.ServicePrice-Offers.goods_hits {
+  height: auto;
+}
+
+.ServicePrice-Offers > .goods {
+  height: auto;
+  width: auto;
+  float: none;
+  padding: 0 15px;
+  //margin: 0;
+  flex: 1 1 230px;
+  box-sizing: border-box;
+}
+
+.ServicePrice-Offers > .goods > a:first-child {
+  height: auto;
+  display: block;
+  margin: auto;
+  width: 13.85em;
+  padding-bottom: 3.4em;
+}
+
+.ServicePrice-Offers > .goods > .price {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  //line-height: 1.5em;
+}
+
+.ServicePrice-Offers .buy {
+  border: none;
+  font: {
+    size: 1em;
+  };
+  padding: 0.5em;
+}
+
+.ServicePrice-Offer {
+  border: 1px solid #a0a0a0;
+  margin-right: 2.5em;
+  min-width: 230px;
+  position: relative;
+}
+
+.ServicePrice-OfferImg {
+  display: block;
+  margin: auto;
+  margin: {
+    top: 1.5em;
+    bottom: 1em;
+  }
+  height: 8.375em;
+}
+
+.ServicePrice-OfferText {
+  width: 13.85em;
+  margin: auto;
+  margin-bottom: 45px;
+  font: {
+    size: 0.875em;
+    weight: 300;
+  }
+  text-align: center;
+}
+
+.ServicePrice-OfferPrice {
+  position: absolute;
+  bottom: 5px;
+  left: 40px;
+  font: {
+    size: 1.25em;
+    weight: 300;
+  };
+}
+
+.ServicePrice-OfferButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  padding: 0.5em 0;
+  border: none;
+  background-color: #99cc33;
+  text-align: center;
+  font: {
+    size: 0.875em;
+    weight: bold;
+  };
+  color: #ffffff;
+}
+
+.ServiceInclude {
+  border: none;
+}
+
+.ServiceInclude-Column {
+  flex: 0 0 100%;
+  padding-bottom: 2em;
+}
+
+.ServiceInclude-ColumnImg {
+  display: block;
+  margin: auto;
+  margin-bottom: 2.375em;
+  height: 11.25em;
+}
+
+.ServiceInclude-ColumnText {
+  margin: auto;
+  margin-bottom: 3.125em;
+  max-width: 20em;
+  text-align: center;
+  font-weight: 300;
+  //line-height: 1.5em;
+}
+
+.ServiceInclude-ColumnList {
+  font-weight: 300;
+  //line-height: 2em;
+  padding-left: 2em;
+}
+
+@media (min-width: 768px) {
+  .ServiceInclude-Column {
+    flex: 0 0 50%;
+    padding-bottom: 0;
+  }
+}

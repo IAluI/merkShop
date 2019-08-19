@@ -153,7 +153,7 @@ gulp.task('fonts', () => {
 
 gulp.task('images', () => {
   return gulp.src(paths.images.src)
-    .pipe(cache(imagemin([
+    .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
       jpegrecompress({
@@ -162,10 +162,15 @@ gulp.task('images', () => {
         max: 75,
         quality: 'medium'
       }),
-      imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: false},
+          {cleanupIDs: false}
+        ]
+      }),
       imagemin.optipng({optimizationLevel: 3}),
       pngquant({quality: '70-75', speed: 5})
-    ])))
+    ]))
     .pipe(gulp.dest(paths.images.dist))
     .pipe(browserSync.stream());
 });

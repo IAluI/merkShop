@@ -10,7 +10,11 @@
 }
 
 .ServContainer-Link {
-
+  &:hover {
+    .ServContainer-Img {
+      border: 3px solid #30cbf2;
+    }
+  }
 }
 
 .ServContainer-Img {
@@ -26,7 +30,7 @@
 .ServContainer-Text {
   display: block;
   color: black;
-  margin-top: 1em;
+  padding-top: 1em;
   padding: 0 0.5em;
 }
 

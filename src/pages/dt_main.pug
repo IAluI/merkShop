@@ -9,21 +9,25 @@ html(lang='ru')
     if _isDevelopment_
       link(rel='stylesheet', type='text/css', href='../styles/main.css')
       link(rel='stylesheet', type='text/css', href='../styles/' + _nameMask_ + '.css')
-    title Монтаж систем кондиционирования
+    title
+      block title
 body(id='content')
   div.container.clear
     div.container
-      //- Интеграция стилей в режими продакшена
-      if !_isDevelopment_
-        style(type='text/css')
-          include ../../dist/styles/main.css
-          include= ../../dist/styles/$nameMask$.css
+      h1
+        block title
+      div.Container
+        //- Интеграция стилей в режими продакшена
+        if !_isDevelopment_
+          style(type='text/css')
+            include ../../dist/styles/main.css
+            include= ../../dist/styles/$nameMask$.css
 
-      block content
+        block content
 
-      //- Интеграция скрипта в зависимости от режима
-      if _isDevelopment_
-        script(type='text/javascript', src='../js/' + _nameMask_ + '.js')
-      else
-        script(type='text/javascript')
-          include= ../../dist/js/$nameMask$.js
+        //- Интеграция скрипта в зависимости от режима
+        if _isDevelopment_
+          script(type='text/javascript', src='../js/' + _nameMask_ + '.js')
+        else
+          script(type='text/javascript')
+            include= ../../dist/js/$nameMask$.js
