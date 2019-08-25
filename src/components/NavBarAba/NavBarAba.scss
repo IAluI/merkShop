@@ -1,0 +1,40 @@
+.NavBarAba {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-bottom: solid 2px #e8e8e8;
+  //--main-color: #000000;
+}
+
+.NavBarAba-Link {
+  flex: 0 0 50%;
+  padding-bottom: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    --icon-color: #30CBF2;
+    text-decoration: underline;
+  }
+}
+
+.NavBarAba-LinkImg {
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5em;
+  height: 3.125em;
+}
+
+.NavBarAba-LinkText {
+  color: black;
+  font-size: 0.875em;
+  display: block;
+  //padding: 0 2em;
+}
+
+@media (min-width: 576px) {
+  .NavBarAba-Link {
+    flex: 0 0 25%;
+  }
+}

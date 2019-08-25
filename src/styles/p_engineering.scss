@@ -1,0 +1,114 @@
+.Engineering {
+
+}
+
+.Engineering-Block1 {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.Engineering-Block2 {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.Engineering-Block2Cell {
+  position: relative;
+  border: 3px solid #dcdcdc;
+  margin-bottom: 1.5em;                                                                                               // Связан с отступами между абзацами. Ввести переменные определяющие глобальный вид верстки?
+  padding: {
+    top: 1.5em;
+    bottom: 1.5em;
+  };
+}
+
+.Engineering-Block2Content {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.Engineering-Block2Content > ul {
+  padding-left: 1.5em;
+  list-style: none;
+}
+
+.Engineering-Block2Content > ul > li {
+  position: relative;
+}
+
+.Engineering-Block2Content > ul > li:before {
+  content: " ";
+  position: absolute;
+  top: 0.4375em;
+  left: -1em;
+  width: 0.625em;
+  height: 0.625em;
+  background-color: #71e2ff;
+}
+
+@media (min-width: 768px) {
+  .Engineering-Block1 {
+    flex: 0 0 50%;
+    max-width: none;
+    padding: {
+      left: 8.33%;
+      right: 15px;
+    }
+  }
+  .Engineering-Block2 {
+    flex: 0 0 50%;
+    max-width: none;
+    padding: {
+      left: 15px;
+      right: 8.33%;
+    }
+  }
+}
+
+.EngineeringPricing-Bg1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.EngineeringPricing-Bg2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.EngineeringPricing-Bg1Duct {
+  transform: scale(0.6) translate(100%, 0);
+}
+
+.EngineeringPricing-Bg2Duct {
+  transform: scale(0.6) translate(-45%, 0)
+}
+
+@media (min-width: 768px) {
+  .EngineeringPricing-Block1 {
+    flex: 0 0 50%;
+    margin: {
+      left: 8.33%;
+    }
+    margin-bottom: 6em;
+  }
+  .EngineeringPricing-Block2 {
+    flex: 0 0 51%;
+    margin: {
+      left: 41.66%;
+    }
+  }
+}

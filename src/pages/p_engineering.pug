@@ -1,0 +1,107 @@
+extends t_main.pug
+include ../components/NavBarAba/NavBarAba.pug
+include ../components/SectionAba/SectionAba.pug
+
+block title
+  | Обслуживание и ремонт кондиционеров
+
+block content
+  +NavBarAba()
+    +NavBarAba-Link({
+      href: '#engineering',
+      text: 'Проектирование систем кондиционирования и вентиляции',
+      svgHref: '/uploaded/images/icons.svg#engineering',
+      viewBox: '0 0 3000 2381.24',
+      x: '-34000'
+    })
+    +NavBarAba-Link({
+      href: '#engineeringPricing',
+      text: 'От чего зависит стоимость проектных работ?',
+      svgHref: '/uploaded/images/icons.svg#engineeringPricing',
+      viewBox: '0 0 3300 2381.24',
+      x: '-38100'
+    })
+    +NavBarAba-Link({
+      href: '#engineeringPrice',
+      text: 'Прайс на проектирование систем вентиляции и кондиционирования',
+      svgHref: '/uploaded/images/icons.svg#price',
+      viewBox: '0 0 1218 2381.24',
+      x: '-31635'
+    })
+  +SectionAba({
+    headerText: 'Проектирование',
+    sectionLink: 'engineering',
+    classes: ''
+  })
+    div.Engineering-Block1
+      p.SectionAba-Paragraph
+        | Наш производственный опыт позволяет делать качественные
+        | и <strong>РЕАЛЬНЫЕ</strong> проекты.
+      p.SectionAba-Paragraph
+        | Поэтому проекты мы всегда выполняем с учетом планируемого
+        | заказчиком бюджета на монтаж, а также удобства монтажа и
+        | дальнейшей эксплуатации.
+    div.Engineering-Block2
+      div.Engineering-Block2Cell
+        div.Engineering-Block2Content
+          span
+            | Мы  всегда знаем:
+          ul
+            li какое оборудование подойдет Вам,
+            li сколько оно будет стоить,
+            li и как фактически оно будет работать.
+  +SectionAba({
+    headerText: 'От чего зависит стоимость проектных работ?',
+    sectionLink: 'engineeringPricing',
+    classes: ''
+  })
+    div.SubSectionAba
+      div.EngineeringPricing-Bg1
+        svg(viewBox = "0 0 1043 328")
+          use(xlink:href = '/uploaded/images/air_duct_1.svg#bg').EngineeringPricing-Bg1Duct
+      div.EngineeringPricing-Bg2
+        svg(viewBox = "0 0 859 455")
+          use(xlink:href = '/uploaded/images/air_duct_2.svg#bg').EngineeringPricing-Bg2Duct
+      div.EngineeringPricing-Block1
+        p.SectionAba-Paragraph
+          | Стоимость проектных работ напрямую зависит от трудоемкости
+          | проектирования. То есть от того, на сколько много инженерных систем
+          | на условном 1м2 площади объекта. Например, стоимость промышленных
+          | объектов, как правило, выше, чем жилых. Или стоимость вентиляции,
+          | которая состоит из приточной и вытяжной системы выше, чем состоящей
+          | только из вытяжной системы.
+      div.EngineeringPricing-Block2
+        p.SectionAba-Paragraph
+          | Так же стоимость проектных работ зависит от степени уникальности
+          | Вашего объекта.  Типовое решение будет стоить дешевле (как правило,
+          | жилые и общественные).
+        p.SectionAba-Paragraph
+          | Если вам  нужно оригинальное решение, то это будет дольше
+          | и, естественно, дороже. В таком случае готовьтесь отвечать на уйму
+          | вопросов ;) (как правило, промышленная аспирация).
+    div.SubSectionAba
+      div.EngineeringPricing-Block3
+        p.SectionAba-Paragraph
+          | Из собственного опыта мы пришли к выводу, что оценивать стоимость
+          | проектных работ по квадратуре объекта – не всегда корректно.
+          | Например, у вас может быть большой промышленный цех площадью 500 м2.
+          | Однако Вам нужен будет только один вытяжной зонт над аккумуляторной.
+          | Или у Вас может быть венткамера площадью всего лишь 20 м2, в которой
+          | расположены  две блочных приточно-вытяжных установки,
+          | которые обслуживают  здание на 500 м2. Плотность расположения
+          | оборудования в венткамере может быть настолько высока, что
+          | проходить свободно сквозь это помещение у взрослого человека
+          |  не получится.
+      div.EngineeringPricing-Block4
+        p.SectionAba-Paragraph
+          | Еще мы должны знать, для каких целей Вам нужен проект.
+          | И нужен ли вообще Вам проект в том представлении, в каком принято
+          | считать. Например, для монтажных организаций в 99% достаточно лишь
+          | эскизного проекта. Поэтому для точной оценки стоимости проекта мы
+          | должны иметь полное представление о Вашем объекте: местоположение,
+          | размеры, технологические процессы и многое другое.
+  +SectionAba({
+    headerText: 'Прайс на проектные услуги',
+    sectionLink: 'engineeringPrice',
+    classes: ''
+  })
