@@ -1,0 +1,9 @@
+mixin CallbackSectionAba(options)
+  - var {header, description} = options
+  section.CallbackSectionAba
+    h2.CallbackSectionAba-Header
+      | #{header}
+    p.CallbackSectionAba-Description
+      | #{description}
+    a(href = "/pages/Forma").CallbackSectionAba-Link
+      | Оставить заявку

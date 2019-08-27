@@ -1,6 +1,7 @@
 extends t_main.pug
 include ../components/NavBarAba/NavBarAba.pug
 include ../components/SectionAba/SectionAba.pug
+include ../components/CallbackSectionAba/CallbackSectionAba.pug
 
 block title
   | Обслуживание и ремонт кондиционеров
@@ -56,12 +57,6 @@ block content
     classes: ''
   })
     div.SubSectionAba
-      div.EngineeringPricing-Bg1
-        svg(viewBox = "0 0 1043 328")
-          use(xlink:href = '/uploaded/images/air_duct_1.svg#bg').EngineeringPricing-Bg1Duct
-      div.EngineeringPricing-Bg2
-        svg(viewBox = "0 0 859 455")
-          use(xlink:href = '/uploaded/images/air_duct_2.svg#bg').EngineeringPricing-Bg2Duct
       div.EngineeringPricing-Block1
         p.SectionAba-Paragraph
           | Стоимость проектных работ напрямую зависит от трудоемкости
@@ -70,6 +65,10 @@ block content
           | объектов, как правило, выше, чем жилых. Или стоимость вентиляции,
           | которая состоит из приточной и вытяжной системы выше, чем состоящей
           | только из вытяжной системы.
+      div.EngineeringPricing-Bg1
+        img(src = '/uploaded/images/air_duct_1.svg', alt = 'Воздуховоды').EngineeringPricing-Bg1Duct
+      div.EngineeringPricing-Bg2
+        img(src = '/uploaded/images/air_duct_2.svg', alt = 'Аспирация').EngineeringPricing-Bg2Duct
       div.EngineeringPricing-Block2
         p.SectionAba-Paragraph
           | Так же стоимость проектных работ зависит от степени уникальности
@@ -80,6 +79,12 @@ block content
           | и, естественно, дороже. В таком случае готовьтесь отвечать на уйму
           | вопросов ;) (как правило, промышленная аспирация).
     div.SubSectionAba
+      div.EngineeringPricing-Bg3
+        div.EngineeringPricing-Bg3Oval
+        img(src = '/uploaded/images/plate_1.svg', alt = 'Большая тарелка').EngineeringPricing-Bg3Plate1
+        span.EngineeringPricing-Bg3Question
+          | ?
+        img(src = '/uploaded/images/plate_2.svg', alt = 'Маленькая тарелка').EngineeringPricing-Bg3Plate2
       div.EngineeringPricing-Block3
         p.SectionAba-Paragraph
           | Из собственного опыта мы пришли к выводу, что оценивать стоимость
@@ -104,4 +109,86 @@ block content
     headerText: 'Прайс на проектные услуги',
     sectionLink: 'engineeringPrice',
     classes: ''
+  })
+    table
+      tr
+        th Наименование
+        th Содержание
+        th Пример
+        th Вентиляция
+        th Кондиционирование
+      tr
+        td Проект оформленный
+        td
+          | Включает: титульный лист, общие данные, таблицу воздухообмена,
+          | планы, при необходимости разрезы,спецификацию в dwg или pdf
+        td
+          a(href = '') Пример
+        td от 15 000 руб
+        td от 8 000 руб
+      tr
+        td Эскизный проект
+        td
+          | Включает: план, аксонометрию, при необходимости
+          | - пару разрезов в dwg или pdf, и спецификацию в xls
+        td
+          a(href = '') Пример
+        td от 4 000 руб
+        td от 3 000 руб
+      tr
+        td Спецификация с ценами
+        td
+          | Удобно для монтажных компаний. Готовое предложение
+          |  для заказчика, Вам - экономия времени
+        td
+          a(href = '') Пример
+        td от 500 руб
+        td от 500 руб
+      tr
+        td Выезд на замер
+        td
+          | В пределах г. Барнаула.
+          | За пределами ст-ть вычисляется по км.
+        td
+          a(href = '') Пример
+        td от 500 руб
+        td от 500 руб
+      tr
+        td Паспорт
+        td
+          | Составляется в dwg или pdf по Вашим данным.
+        td
+          a(href = '') Пример
+        td от 2 000 руб
+        td от 2 000 руб
+      tr
+        td Замеры для составления паспорта
+        td
+          | Выезд на объект, составление обмерочного плана помещения
+          | и инженерных систем, замеры воздухообмена анемометом
+        td
+          a(href = '') Пример
+        td от 1 000 руб
+        td от 1 000 руб
+      tr
+        td Исполнительная по выполненному проекту
+        td
+          | Составляется в dwg или pdf по Вашим данным
+        td
+          a(href = '') Пример
+        td от 5 000 руб
+        td от 3 000 руб
+      tr
+        td Смета
+        td
+          | Составляется в  погромном комплексе ГрандСмета,
+          | локальный сметный расчет + КС-2, КС-3
+        td
+          a(href = '') Пример
+        td от 3 000 руб
+        td от 3 000 руб
+
+  +CallbackSectionAba({
+    header: 'Не знаете сколько будет стоить Ваш проект? ',
+    description: 'Мы Вам поможем! Просто позвоните нам! Или оставьте заявку.'
   })

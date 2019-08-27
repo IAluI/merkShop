@@ -1,0 +1,29 @@
+.CallbackSectionAba {
+  text-align: center;
+}
+
+.CallbackSectionAba-Header {
+  font: {
+    size: 1.375em;
+    weight: 700;
+  };
+  padding: 0.75em 0;
+}
+
+.CallbackSectionAba-Description {
+  max-width: 320px;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.CallbackSectionAba-Link {
+  display: inline-block;
+  font: {
+    size: 1.375em;
+    weight: 700;
+  };
+  text-decoration: none;
+  color: #000;
+  padding: 0.5em 3em;
+  border: 2px solid #71e2ff;
+}

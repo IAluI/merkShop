@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   border-bottom: solid 2px #e8e8e8;
+  overflow: hidden;
 }
 
 .SectionAba-Header {
@@ -42,8 +43,18 @@
   flex-wrap: wrap;
   flex: 0 0 100%;
   border-bottom: solid 2px #e8e8e8;
+  padding: {
+    top: 1.5em;
+  };
+  overflow: hidden;
 }
 
-.SubSectionAba:last-child {
+.SubSectionAba:nth-of-type(1) {
+  padding: {
+    top: 0;
+  };
+}
+
+.SubSectionAba:nth-last-of-type(1) {
   border-bottom: none;
 }
