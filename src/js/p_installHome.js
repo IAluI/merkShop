@@ -10,62 +10,140 @@ $(document).ready(function() {
     }, 350);
   });
 
-  $('.StdInstall-CaseImg').slick({
-    slidesToShow: 1,
-    dots: true,
-    arrows: false,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 2
+  /*var installStepsSlider = new Swiper ('.InstallSteps-Slider', {
+    grabCursor: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });*/
+
+  var installStepsSlider = swiperInit({
+    mediaQ: '(min-width: 1230px)',
+    swiperContainer: '.InstallSteps-Slider',
+    swiperOptions: {
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      breakpointsInverse: true,
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
         }
-      }, {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 3,
-          dots: false
-        }
-      }
-    ]
+      },
+    }
   });
 
-  (function unStdInstallSlider() {
-    var root = $('.UnStdInstall-Cases');
-    var isDestroyed = false;
-    var media = window.matchMedia('(max-width: 767px)');
-    function slickInit() {
-      root.slick({
-        slidesToShow: 1,
-        dots: true,
-        arrows: false,
-        mobileFirst: true,
-        responsive: [
-          {
-            breakpoint: 575,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 767,
-            settings: 'unslick'
-          }
-        ]
-      }, true);
-    };
+  var unstdInstallSlider = swiperInit({
+    mediaQ: '(min-width: 1230px)',
+    swiperContainer: '.UnstdInstall-Slider',
+    swiperOptions: {
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      breakpointsInverse: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
+    }
+  });
 
-    root.on('destroy', function(){
-      isDestroyed = true;
-    });
-    slickInit();
-    $(window).resize($.debounce(250, function () {
-      if (media.matches && isDestroyed) {
-        slickInit();
-        isDestroyed = false;
-      }
-    }));
-  })();
+  var stdInstallSlider1 = swiperInit({
+    mediaQ: '(min-width: 1230px)',
+    swiperContainer: '.StdInstall-Variant1',
+    swiperOptions: {
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      breakpointsInverse: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
+      observer: true,
+    }
+  });
 
+  var stdInstallSlider2 = swiperInit({
+    mediaQ: '(min-width: 1230px)',
+    swiperContainer: '.StdInstall-Variant2',
+    swiperOptions: {
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      breakpointsInverse: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
+      observer: true,
+    }
+  });
+
+  var stdInstallSlider3 = swiperInit({
+    mediaQ: '(min-width: 1230px)',
+    swiperContainer: '.StdInstall-Variant3',
+    swiperOptions: {
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      breakpointsInverse: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
+      observer: true,
+    }
+  });
 });

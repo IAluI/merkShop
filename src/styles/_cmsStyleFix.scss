@@ -1,0 +1,30 @@
+.container > h1:first-child {
+  display: none;
+}
+
+#content > .divider {
+  display: none;
+}
+
+body #line {
+  margin-bottom: 28px;
+}
+
+@media (max-width: 480px) {
+  body #line .cat_title {
+    width: auto;
+  }
+  #line .cat_title > a:first-child {
+    text-indent: 0;
+  }
+  body #cart {
+    float: right;
+    height: auto;
+  }
+  body #cart > div {
+    padding-bottom: 0px;
+  }
+  #line .cat_title > a:first-child:after {
+    right: -10px;
+  }
+}

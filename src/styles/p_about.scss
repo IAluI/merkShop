@@ -1,11 +1,7 @@
-/*.Advantages, .Samples, .Location, .Dealers, .Callback {
-  padding-bottom: 40px;
-}*/
-
 .Advantages-CaseRow {
   display: flex;
   justify-content: space-around;
-  /*padding-top: 1.5em;*/
+
 }
 
 .Advantages-Case {
@@ -61,7 +57,7 @@
 
 @media (min-width: 768px) {
   .Advantages-CaseRow {
-    /*padding-top: 2em;*/
+
   }
   .Advantages-CaseHeader {
     display: block;
@@ -132,26 +128,16 @@
     };
   }
   .Location-CaseText {
-    /*font: {
-      size: 1.25em;
-    };*/
+
   }
   .Location-CaseLink {
-    /*font: {
-      size: 1.25em;
-    };*/
+
   }
 }
 
 .Dealers {
 
 }
-
-/*@keyframes arrowAni {
-  from {transform: scale(1);}
-  50% {transform: scale(1.3);}
-  to {transform: scale(1);}
-}*/
 
 .Dealers-SliderContainer {
   display: flex;
@@ -160,52 +146,17 @@
 
 .Dealers-SliderArrow {
   display: none;
-  /*flex: 0 0 1.5em;
-  padding: 0 0.5em;*/
 }
 
 .Dealers-SliderArrow > img {
   width: 100%;
   cursor: pointer;
   transition: transform 0.3s;
-  /*animation: {
-    name: arrowAni;
-    duration:  1s;
-    iteration-count: infinite;
-    timing-function: ease-in-out;
-    play-state: paused;
-  };*/
 }
 
 .Dealers-Slider {
   overflow: hidden;
 }
-
-/*.Dealers-Slider > .slick-dots {
-  text-align: center;
-  margin: {
-    top: 10px;
-  };
-}
-
-.Dealers-Slider > .slick-dots > li {
-  display: inline-block;
-  cursor: pointer;
-  width: 8px;
-  height: 8px;
-  border-radius: 4px;
-  background-color: black;
-  opacity: 0.25;
-  margin: 0 10px;
-}
-
-.Dealers-Slider > .slick-dots > li.slick-active {
-  opacity: 0.75;
-}
-
-.Dealers-Slider > .slick-dots > li > button {
-  display: none;
-}*/
 
 .Dealers-SliderItem {
   display: inline-block;

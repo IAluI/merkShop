@@ -66,12 +66,12 @@ const paths = {
     watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg}"
   },
   scripts: {
-    src: ["./src/js/main.js", "./src/js/p_*.js"],
+    src: ["./src/js/libraries.js", "./src/js/main.js", "./src/js/p_*.js"],
     dist: "./dist/js/",
     watch: "./src/js/**/*.js"
   },
   styles: {
-    src: ["./src/styles/main.scss", "./src/styles/site.scss", "./src/styles/p_*.scss"],
+    src: ["./src/styles/libraries.scss", "./src/styles/main.scss", "./src/styles/site.scss", "./src/styles/p_*.scss"],
     dist: "./dist/styles/",
     watch: "./src/styles/**/*.scss"
   }

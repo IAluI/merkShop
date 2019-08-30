@@ -5,7 +5,7 @@ block title
   | Обслуживание и ремонт кондиционеров
 
 block content
-  +NavBarAba()
+  nav.NavBarAba
     +NavBarAba-Link({
       href: '#whyService',
       text: 'Зачем необходимо обслуживание кондиционера',
@@ -110,8 +110,8 @@ block content
     div.goods_hits.Row.ServicePrice-Offers
       div.goods
         a(href="/pages/Forma")
-          svg(viewBox="0 0 2430 2381.24").ServicePrice-OfferImg
-            use(xlink:href="/uploaded/images/icons.svg#homeCond", x="-34640")
+          svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
+            use(xlink:href="/uploaded/images/icons.svg#homeCond", x="-41000")
           span.name
             | Настенная сплит система мощностью от 2 до 7 кВт
         div.price
@@ -123,7 +123,7 @@ block content
       div.goods
         a(href="/pages/Forma")
           svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
-            use(xlink:href="/uploaded/images/icons.svg#promCond", x="-37651")
+            use(xlink:href="/uploaded/images/icons.svg#promCond", x="-34600")
           span.name
             | Кассетные, универсальные, канальные, колонные сплит системы мощностью от 3,5 до 16 кВт
         div.price
@@ -134,8 +134,8 @@ block content
           | Заказать
       div.goods
         a(href="/pages/Forma")
-          svg(viewBox="0 0 1310 2381.24").ServicePrice-OfferImg
-            use(xlink:href="/uploaded/images/icons.svg#mobCond", x="-41230")
+          svg(viewBox="0 0 1500 2381.24").ServicePrice-OfferImg
+            use(xlink:href="/uploaded/images/icons.svg#mobCond", x="-38300")
           span.name
             | Мобильные кондиционеры
         div.price
@@ -143,34 +143,6 @@ block content
           span.rouble
             | Р
         a(href="/pages/Forma").buy
-          | Заказать
-    //- div.Row.ServicePrice-Content
-      div.goods.ServicePrice-Offer
-        svg(viewBox="0 0 2430 2381.24").ServicePrice-OfferImg
-          use(xlink:href="/uploaded/images/icons.svg#homeCond", x="-34640")
-        p.ServicePrice-OfferText
-          | Настенная сплит система мощностью от 2 до 7 кВт
-        span.ServicePrice-OfferPrice
-          | 2 000 Р
-        button.ServicePrice-OfferButton
-          | Заказать
-      div.ServicePrice-Offer
-        svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
-          use(xlink:href="/uploaded/images/icons.svg#promCond", x="-37651")
-        p.ServicePrice-OfferText
-          | Кассетные, универсальные, канальные, колонные сплит системы мощностью от 3,5 до 16 кВт
-        span.ServicePrice-OfferPrice
-          | 2 500 Р
-        button.ServicePrice-OfferButton
-          | Заказать
-      div.ServicePrice-Offer
-        svg(viewBox="0 0 1310 2381.24").ServicePrice-OfferImg
-          use(xlink:href="/uploaded/images/icons.svg#mobCond", x="-41230")
-        p.ServicePrice-OfferText
-          | Мобильные кондиционеры
-        span.ServicePrice-OfferPrice
-          | 2 000 Р
-        button.ServicePrice-OfferButton
           | Заказать
   section.SerAndRepSection.ServiceInclude
     h2.SerAndRepSection-Header

@@ -7,20 +7,20 @@ block title
   | Обслуживание и ремонт кондиционеров
 
 block content
-  +NavBarAba()
+  nav.NavBarAba
     +NavBarAba-Link({
       href: '#engineering',
       text: 'Проектирование систем кондиционирования и вентиляции',
       svgHref: '/uploaded/images/icons.svg#engineering',
-      viewBox: '0 0 3000 2381.24',
-      x: '-34000'
+      viewBox: '0 0 3100 2381.24',
+      x: '-44300'
     })
     +NavBarAba-Link({
       href: '#engineeringPricing',
       text: 'От чего зависит стоимость проектных работ?',
       svgHref: '/uploaded/images/icons.svg#engineeringPricing',
-      viewBox: '0 0 3300 2381.24',
-      x: '-38100'
+      viewBox: '0 0 3400 2381.24',
+      x: '-48500'
     })
     +NavBarAba-Link({
       href: '#engineeringPrice',
@@ -43,7 +43,7 @@ block content
         | заказчиком бюджета на монтаж, а также удобства монтажа и
         | дальнейшей эксплуатации.
     div.Engineering-Block2
-      div.Engineering-Block2Cell
+      div.SectionAba-Important
         div.Engineering-Block2Content
           span
             | Мы  всегда знаем:
@@ -56,7 +56,7 @@ block content
     sectionLink: 'engineeringPricing',
     classes: ''
   })
-    div.SubSectionAba
+    div.SectionAba-SubSection
       div.EngineeringPricing-Block1
         p.SectionAba-Paragraph
           | Стоимость проектных работ напрямую зависит от трудоемкости
@@ -78,7 +78,7 @@ block content
           | Если вам  нужно оригинальное решение, то это будет дольше
           | и, естественно, дороже. В таком случае готовьтесь отвечать на уйму
           | вопросов ;) (как правило, промышленная аспирация).
-    div.SubSectionAba
+    div.SectionAba-SubSection
       div.EngineeringPricing-Bg3
         div.EngineeringPricing-Bg3Oval
         img(src = '/uploaded/images/plate_1.svg', alt = 'Большая тарелка').EngineeringPricing-Bg3Plate1

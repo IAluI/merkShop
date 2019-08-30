@@ -1,274 +1,297 @@
-.TopNav {
-  padding: {
-    top: 1em;
-  };
+.StdInstall-VariantsContainer {
+  width: 100%;
+  margin-bottom: 1.5em;
 }
 
-.TopNav-NavList {
-  list-style-type: none;
-  /*font: {
-    size: 10px;
-  };*/
-  line-height: 1.5em;
+.StdInstall-VariantsSelect {
+  display: flex;
 }
 
-.TopNav-NavList > li {
-  position: relative;
-  border: {
-    bottom: 2px solid #EAECED;
-    left: 2px solid #EAECED;
-    right: 2px solid #EAECED;
-  };
-}
-
-.TopNav-NavList > li:first-child {
-   border: {
-     top: 2px solid #EAECED;
-     radius: 5px 5px 0 0;
-   };
- }
-
-.TopNav-NavList > li:last-child {
-  border: {
-    radius: 0 0 5px 5px;
-  };
-}
-
-.TopNav-NavList > li > a {
-  //position: relative;
-  display: inline-block;
-  width: 93%;
-  padding: {
-    right: 5%;
-    left: 2%;
-    /*top: 5px;
-    bottom: 5px;*/
-  }
-  text-decoration: none;
-  color: black;
+.StdInstall-VariantsSelect > label {
+  flex: 1 1 auto;
+  cursor: pointer;
+  text-align: center;
+  border: solid 2px #e8e8e8;
+  border-radius: 15px 15px 0 0;
   font: {
-    weight: 700;
+    size: 1.375em;
   };
-  //margin-right: 1.5em;
-  //overflow: hidden;
-  padding: {
-    top: 0.25em;
-    bottom: 0.25em;
-  };
-  min-height: 2em;
+  padding: 0.5em;
 }
 
-.TopNav-NavList > li > a:after {
-  content: ">";
+.StdInstall-VariantsContainer > input {
   position: absolute;
-  right: 5px;
-  bottom: 50%;
-  color: #808080;
-  font: {
-    weight: 500;
-    size: 1em;
-  };
-  line-height: 1em;
-  transform: translateY(50%) scaleY(3);
+  z-index: -1;
+  opacity: 0;
 }
 
-.TopNav-Img {
-  display: none;
+.StdInstall-Variant1,
+.StdInstall-Variant2,
+.StdInstall-Variant3 {
+  //display: block;
+  flex: 0 0 100%;
 }
 
-@media (min-width: 768px) {
-  .TopNav {
-    position: relative;
-    padding: {
-      top: 2em;
-    };
+/*.StdInstall-Variant1 {
+  order: 1;
+}
+
+.StdInstall-Variant2 {
+  order: 2;
+}
+
+.StdInstall-Variant3 {
+  order: 3;
+}*/
+
+#stdInstallVariant1:checked ~ div > .StdInstall-Variant1,
+#stdInstallVariant2:checked ~ div > .StdInstall-Variant2,
+#stdInstallVariant3:checked ~ div > .StdInstall-Variant3 {
+  //display: block;
+  order: -1;
+}
+
+#stdInstallVariant1:checked ~ div > label:nth-of-type(1),
+#stdInstallVariant2:checked ~ div > label:nth-of-type(2),
+#stdInstallVariant3:checked ~ div > label:nth-of-type(3) {
+  border-bottom: none;
+}
+
+.StdInstall-Variants {
+  display: flex;
+  border: {
+    left: solid 2px #e8e8e8;
+    right: solid 2px #e8e8e8;
   }
-  .TopNav-NavList {
-    /*font: {
-      size: 12px;
-    };*/
-    column-count: 2;
+}
+
+.StdInstall-VariantSlide {
+  width: 24em;
+}
+
+.StdInstall-VariantSlide > ul {
+  list-style: none;
+  text-align: left;
+  line-height: 1.75em;
+  padding: 0 5px;
+}
+
+.StdInstall-VariantSlide > ul > li:before {
+  content: '- ';
+}
+
+.StdInstall-Prices {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.5em;
+  border: {
+    bottom: solid 2px #e8e8e8;
+    left: solid 2px #e8e8e8;
+    right: solid 2px #e8e8e8;
   }
-  .TopNav-NavList > li {
-    position: relative;
-    margin: {
-      left: 130px;
-    };
-    border: none;
+  overflow: hidden;
+}
+
+.StdInstall-Prices > table {
+  flex: 0 0 100%;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  td, th {
+    font: {
+      size: 0.85em;
+      weight: 400;
+    }
+    padding: 0.5em;
   }
-  .TopNav-NavList > li:first-child {
-    border: none;
+  th:nth-child(1) {
+    background-color: #ececec;
   }
-  .TopNav-NavList > li:before {
-    content: "";
-    position: absolute;
-    top: 0.55em;
-    left: -1.25em;
-    width: 0.76em;
-    height: 0.76em;
-    border: {
-      radius: 0.38em;
-    };
-    background: {
-      color: #75D404;
+  th:nth-child(2) {
+    background-color: #f4f4f4;
+  }
+  th:nth-child(3) {
+    background-color: #f9f9f9;
+  }
+  tbody > tr:nth-child(odd){
+    td:nth-child(1) {
+      background-color: #dadada;
+    }
+    td:nth-child(2) {
+      background-color: #ebebeb;
+    }
+    td:nth-child(3) {
+      background-color: #f4f4f4;
     }
   }
-  .TopNav-NavList > li > a {
-    width: 100%;
-    font: {
-      weight: 400;
-    };
-    padding: {
-      /*top: 0;
-      bottom: 0;*/
-      left: 0;
-    };
-    transition: transform 0.3s ease-out;
-  }
-  .TopNav-NavList > li > a:after {
-    content: none;
-  }
-  .TopNav-NavList > li > a:hover {
-    transform: translateX(3%) scale(1.03);
-    /*font: {
-      weight: 700;
-    };*/
-    //padding-right: 0;
-  }
-  .TopNav-Img {
-    display: block;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    transition: transform 1s;
-  }
-  .TopNav-Img:first-child {
-    left: 0;
-  }
-  .TopNav-Img:last-child {
-    left: 50%;
-  }
-  .TopNav-Img > img {
-    height: 130px;
+  td:nth-child(3) strong {
+    display: none;
   }
 }
 
-.StdInstall-Case {
-  margin-bottom: 0.75em;
+#stdInstallVariant1:checked ~ .StdInstall-Prices td:nth-child(3) strong:nth-of-type(1),
+#stdInstallVariant2:checked ~ .StdInstall-Prices td:nth-child(3) strong:nth-of-type(2),
+#stdInstallVariant3:checked ~ .StdInstall-Prices td:nth-child(3) strong:nth-of-type(3) {
+  display: inline;
 }
 
-.StdInstall-CaseHead {
-  font: {
-    size: 1.25em;
-  };
-  margin-bottom: 0.75em;
-}
-
-.StdInstall-CaseHeader {
-  display: none;
- font: {
-   weight: 400;
- }
-}
-
-.StdInstall-CaseHeaderImp {
-  font: {
-    weight: 400;
-  }
-}
-
-.StdInstall-CaseHeaderImp > span {
-  font: {
-    weight: 700;
-  };
-  color: #30CBF2;
-}
-
-.StdInstall-CasePrices td:first-child:before {
-  content: "-";
-}
-
-.StdInstall-CasePrices td:first-child:after {
-  content: " ";
-  white-space: pre;
-}
-
-.StdInstall-CaseImg {
-  overflow: hidden;
-}
+/*#stdInstallVariant1:checked ~ div > table:nth-of-type(1),
+#stdInstallVariant2:checked ~ div > table:nth-of-type(2),
+#stdInstallVariant3:checked ~ div > table:nth-of-type(3) {
+  //display: block;
+  order: -1;
+}*/
 
 @media (min-width: 576px) {
-  .StdInstall-CaseHeader {
-    display: inline;
+  .StdInstall-Prices > table {
+    td, th {
+      font-size: 1em;
+    }
   }
 }
 
-.UnStdInstall {
-  overflow: hidden;
+@media (min-width: 1230px) {
+  .StdInstall-Variants > .swiper-container {
+    @import "swiperUnmount";
+  }
 }
 
-.UnStdInstall-Cases {
-  margin-bottom: 0.75em;
+.InstallSteps-Slider {
+  counter-reset: installStepsSlider;
 }
 
-.UnStdInstall-Case {
-  text-align: center;
-  display: inline-block;
+.InstallSteps-Slide {
+  width: 240px;
 }
 
-.UnStdInstall-Case > img {
+.InstallSteps-SlideImg {
+  position: relative;
   width: 100%;
+  padding: 20px;
 }
-.UnStdInstall-Case > h5 {
-  padding: 0 0.5em;
-  font: {
-    size: 1em;
+
+.InstallSteps-SlideImg:before {
+  counter-increment: installStepsSlider;
+  content: counter(installStepsSlider);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #00e3ff;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+
+.InstallSteps-SlideText {
+  padding: 0 2px;
+}
+
+@media (min-width: 1230px) {
+  .InstallSteps-Slider {
+    @import "swiperUnmount";
   }
+}
+
+.UnstdInstall-Slider {
+
+}
+
+.UnstdInstall-Slide {
+  width: 24em;
+}
+
+@media (min-width: 1230px) {
+  .UnstdInstall-Slider {
+    @import "swiperUnmount";
+  }
+}
+
+.InstallYours-List {
+  list-style: none;
+  margin-bottom: 1.5em;
+}
+
+.InstallYours-List > li {
+
+}
+
+.InstallYours-List > li:before {
+  content: '- ';
+}
+
+.Measurement-Bg1 {
+  display: none;
+  position: absolute;
+  top: -6.875em;
+  left: 0;
+  z-index: -1;
+  height: 18em;
+  opacity: 0.5;
 }
 
 @media (min-width: 768px) {
-  .UnStdInstall-Cases {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .UnStdInstall-Case {
-    flex: 0 0 50%;
+  .Measurement-Bg1 {
+    display: block;
   }
 }
 
-@media (min-width: 1200px) {
-  .UnStdInstall-Case {
-    flex: 0 0 33.33%;
-  }
-}
-
-.Prices > table {
-  border-collapse: collapse;
-  line-height: 1.5em;
+.InstalBySelf-Bg1 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-60%);
+  z-index: -1;
   width: 100%;
-  margin-bottom: 0.75em;
+  opacity: 0.5;
 }
 
-.Prices td, th {
-  border: 1px solid black;
-  padding: 0.25em;
+@media (min-width: 768px) {
+  .InstalBySelf-Bg1 {
+    display: block;
+  }
 }
 
-.TwoStepInstall > ul, ol {
-  margin-left: 3em;
+.BuyAndInstall-Bg1 {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  opacity: 0.5;
 }
 
-.BuyAndInstall-Img {
-  float: left;
-  margin: 1em 2em;
-  max-width: 30%;
+@media (min-width: 768px) {
+  .BuyAndInstall-Bg1 {
+    display: block;
+  }
 }
 
-.YoursEqipInstall > ul, ol {
-  margin-left: 3em;
-}
-
-.BadInstall-Img {
-  display: block;
+.Price-Table {
   margin: auto;
+  border-collapse: collapse;
+}
+
+.Price-Table tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+.Price-Table tr:nth-child(odd) > td:first-child {
+  background-color: #d9d9d9;
+}
+
+.Price-Table th {
+  padding: 0.5em;
+}
+
+.Price-Table td {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.Price-Table td:first-child {
+  text-align: left;
 }

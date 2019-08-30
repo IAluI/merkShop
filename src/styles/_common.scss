@@ -1,0 +1,193 @@
+.Container {
+  width: 100%;
+  min-width: 290px;
+  font: {
+    size: 12px;
+  }
+  line-height: 1.5em;
+  --icon-color: #000;
+}
+
+@media (min-width: 576px) {
+  .Container {
+    font: {
+      size: 13px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .Container {
+    font: {
+      size: 14px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .Container {
+    font: {
+      size: 15px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .Container {
+    font: {
+      size: 16px;
+    }
+  }
+}
+
+.color_blue {
+  color: #00ccf4;
+}
+
+.Row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.swiper-slide {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.swiper-slide > div {
+  display: inline-block;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-container {
+  padding-bottom: 1.5em;
+}
+
+.swiper-pagination-bullet-active {
+  background: black;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: 0;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: 0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background-size: 1.6875em 2.75em;
+}
+
+/*
+.SectionHeader {
+  text-align: center;
+  font: {
+    weight: 700;
+    size: 1.5em;
+  };
+  padding: {
+    top: 1em;
+    bottom: 0.5em;
+  };
+}
+
+.SectionHeader > a {
+  color: black;
+  text-decoration: none;
+}
+
+.SectionHeader > a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .SectionHeader {
+    text-align: left;
+    padding: {
+      top: 1em;
+      bottom: 1em;
+      left: 2em;
+    };
+  }
+}
+
+.Callback {
+  text-align: center;
+}
+
+.Callback-Img {
+
+}
+
+.Callback-Text {
+  font: {
+    size: 1.5em;
+    weight: 700;
+  };
+}
+
+.Callback-Button {
+  font: {
+    size: 1em;
+    weight: 300;
+  };
+  margin: 2em;
+  padding: 1em 2em;
+  border: 2px solid black;
+  background-color: #71E2FF;
+  transition: all 0.3s ease;
+}
+
+.Callback-Button:hover {
+  background-color: white;
+  border-color: grey;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .Callback-Text {
+    font: {
+      size: 2em;
+    };
+  }
+  .Callback-Button {
+    !*font: {
+      size: 1em;
+    };*!
+  }
+}
+
+.slick-dots {
+  text-align: center;
+  margin: {
+    top: 0.75em;
+  };
+}
+
+.slick-dots > li {
+  display: inline-block;
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: black;
+  opacity: 0.25;
+  margin: 0 10px;
+}
+
+.slick-dots > li.slick-active {
+  opacity: 0.75;
+}
+
+.slick-dots > li > button {
+  display: none;
+}
+
+.slick-slide {
+  //outline: 0;
+}*/
