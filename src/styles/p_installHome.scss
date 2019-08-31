@@ -28,26 +28,12 @@
 .StdInstall-Variant1,
 .StdInstall-Variant2,
 .StdInstall-Variant3 {
-  //display: block;
   flex: 0 0 100%;
 }
-
-/*.StdInstall-Variant1 {
-  order: 1;
-}
-
-.StdInstall-Variant2 {
-  order: 2;
-}
-
-.StdInstall-Variant3 {
-  order: 3;
-}*/
 
 #stdInstallVariant1:checked ~ div > .StdInstall-Variant1,
 #stdInstallVariant2:checked ~ div > .StdInstall-Variant2,
 #stdInstallVariant3:checked ~ div > .StdInstall-Variant3 {
-  //display: block;
   order: -1;
 }
 
@@ -135,13 +121,6 @@
   display: inline;
 }
 
-/*#stdInstallVariant1:checked ~ div > table:nth-of-type(1),
-#stdInstallVariant2:checked ~ div > table:nth-of-type(2),
-#stdInstallVariant3:checked ~ div > table:nth-of-type(3) {
-  //display: block;
-  order: -1;
-}*/
-
 @media (min-width: 576px) {
   .StdInstall-Prices > table {
     td, th {
@@ -211,10 +190,6 @@
 .InstallYours-List {
   list-style: none;
   margin-bottom: 1.5em;
-}
-
-.InstallYours-List > li {
-
 }
 
 .InstallYours-List > li:before {
