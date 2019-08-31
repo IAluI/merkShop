@@ -1,5 +1,6 @@
 extends t_main.pug
 include ../components/NavBarAba/NavBarAba.pug
+include ../components/SectionAba/SectionAba.pug
 
 block title
   | Обслуживание и ремонт кондиционеров
@@ -33,14 +34,13 @@ block content
       viewBox: '0 0 4000 2381.24',
       x: '-6500'
     })
-  section.Row.SerAndRepSection.WhyService
-    div.WhyService-Bg
-      img(src="/uploaded/images/bg_disease.svg").WhyService-BgImg1
-    h2.SerAndRepSection-Header
-      a(name="whyService", id="whyService", href="#whyService")
-        | Зачем необходимо обслуживать кондиционер?
-    div.WhyService-Text1
-      p.SerAndRepSection-Paragraph
+  +SectionAba({
+    headerText: 'Зачем необходимо обслуживать кондиционер?',
+    sectionLink: 'whyService',
+    classes: 'WhyService'
+  })
+    div.col-12.offset-md-1.col-md-7.col-xl-5.SectionAba-Column_maxWidth_35
+      p.SectionAba-Paragraph
         | В процессе эксплуатации сплит системы теплообменники внутреннего
         | и наружного блоков забиваются пылью, грязью и пухом.
         | Теплоотдача ухудшается, компрессор начинает повышать давление
@@ -49,7 +49,7 @@ block content
         | поломке компрессора и, как правило, компрессор кондиционера
         | ремонту уже не подлежит. А замена компрессора соизмерима по
         | цене с покупкой новой сплит-системы.
-      p.SerAndRepSection-Paragraph
+      p.SectionAba-Paragraph
         | Также периодически засоряется дренажная система. В ванночке
         | накапливается слизь, которая создают непроходимость в дренажной
         | трубке. В результате, с внутреннего блока по стене начинает литься
@@ -61,25 +61,26 @@ block content
         | монтаже этот показатель достигает до 50% и более. При нехватке
         | фреона в сети, кондиционер начинает холодить хуже, либо совсем
         | перестает охлаждать.
-      p.SerAndRepSection-Paragraph
+      p.SectionAba-Paragraph
         | В любом техническом паспорте кондиционера Вы найдете требования
         | о необходимости проведения технического обслуживания.
         | Даже гарантия на оборудование дается ТОЛЬКО при условии
         | своевременного сервисного обслуживания кондиционера.
-    div.WhyService-Footer
-      p.WhyService-FooterText
+    div.col-md-4.col-xl-6.SectionAba-Column_maxWidth_35
+      img(src="/uploaded/images/bg_disease.svg").WhyService-BgImg1
+    div.SectionAba-Footer
+      p.SectionAba-Paragraph
         | Техобслуживание кондиционера необходимо
         | и для Вашего личного здоровья.
         | Давно нечищеный кондиционер превращается в
         | пылесборник и рассадник вредных микроорганизмов.
-  section.Row.SerAndRepSection.PeriodService
-    div.PeriodService-Bg
-      img(src="/uploaded/images/bg_sevice.svg").PeriodService-BgImg1
-    h2.SerAndRepSection-Header
-      a(name="periodService", id="periodService", href="#periodService")
-        | Как часто нужно проводить чистку кондиционера?
-    div.PeriodService-Text1
-      p.SerAndRepSection-Paragraph
+  +SectionAba({
+    headerText: 'Как часто нужно проводить чистку кондиционера?',
+    sectionLink: 'periodService',
+    classes: 'borderColor_blue PeriodService'
+  })
+    div.col-12.offset-md-1.col-md-7.col-xl-5.SectionAba-Column_maxWidth_35
+      p.SectionAba-Paragraph
         | Частота сервиса кондиционеров зависит от условий эксплуатации:
         | от частоты пользования, местоположении блоков, назначении
         | обслуживаемого помещения.
@@ -88,90 +89,95 @@ block content
         | В серверных рекомендуется проводить обслуживание не менее
         | 2-х раз в год. А в магазинах одежды иногда обслуживают по 3-4 раза
         |  за сезон.
-      p.SerAndRepSection-Paragraph
+      p.SectionAba-Paragraph
         | Сетки (фильтра) внутреннего блока можно чистить самостоятельно.
         | Рекомендуем промывать как можно чаще – раз в 2 недели.
         | перестает охлаждать.
-      p.SerAndRepSection-Paragraph
+      p.SectionAba-Paragraph
         | Настоятельно рекомендуем делать первое ТО до начала сезона:
         | где-то в апреле - начале мая. С середины мая становится жарко и
         | сильно повышается степень загруженности кондиционерных фирм.
         | Не следует тянуть до того момента, когда в жару вы просто не сможете
         | воспользоваться технически неисправным кондиционером, а ждать
         | специалиста уже придется 1-2 недели.
-    div.PeriodService-Footer
-      p.PeriodService-FooterText
+    div.col-md-4.col-xl-6.SectionAba-Column_maxWidth_35.PeriodService-Bg
+      img(src="/uploaded/images/bg_sevice.svg").PeriodService-BgImg1
+    div.SectionAba-Footer.borderColor_blue
+      p.SectionAba-Paragraph
         | Вовремя выполненное обслуживание кондиционера сохранит
         | Ваш бюджет, здоровье и нервы.
-  section.SerAndRepSection.ServicePrice
-    h2.SerAndRepSection-Header
-      a(name="servicePrice", id="servicePrice", href="#servicePrice")
-        | Стоимость обслуживания кондиционера
-    div.goods_hits.Row.ServicePrice-Offers
-      div.goods
-        a(href="/pages/Forma")
-          svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
-            use(xlink:href="/uploaded/images/icons.svg#homeCond", x="-41000")
-          span.name
-            | Настенная сплит система мощностью от 2 до 7 кВт
-        div.price
-          | 2 000&nbsp
-          span.rouble
-            | Р
-        a(href="/pages/Forma").buy
-          | Заказать
-      div.goods
-        a(href="/pages/Forma")
-          svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
-            use(xlink:href="/uploaded/images/icons.svg#promCond", x="-34600")
-          span.name
-            | Кассетные, универсальные, канальные, колонные сплит системы мощностью от 3,5 до 16 кВт
-        div.price
-          | 2 500&nbsp
-          span.rouble
-            | Р
-        a(href="/pages/Forma").buy
-          | Заказать
-      div.goods
-        a(href="/pages/Forma")
-          svg(viewBox="0 0 1500 2381.24").ServicePrice-OfferImg
-            use(xlink:href="/uploaded/images/icons.svg#mobCond", x="-38300")
-          span.name
-            | Мобильные кондиционеры
-        div.price
-          | 2 000&nbsp
-          span.rouble
-            | Р
-        a(href="/pages/Forma").buy
-          | Заказать
-  section.SerAndRepSection.ServiceInclude
-    h2.SerAndRepSection-Header
-      a(name="serviceInclude", id="serviceInclude", href="#serviceInclude")
-        | Что включает в себя обслуживание сплит систем?
-    div.Row
-      div.ServiceInclude-Column
-        img(src="/uploaded/images/inner_cond.svg").ServiceInclude-ColumnImg
-        p.ServiceInclude-ColumnText
-          | Техническое обслуживание внутреннего блока включает в себя:
-        ol.ServiceInclude-ColumnList
-          li Снятие, очистка и промывка фильтров внутренней рециркуляции;
-          li Очистка внутреннего блока от внешних источников загрязнения;
-          li Очистка крыльчатки вентилятора;
-          li Очистка поддона для сбора конденсата внутреннего блока;
-          li Очистка дренажного канала;
-          li Осушка по программе встроенного микропроцессора;
-          li Осмотр блока электроники;
-          li Проверка качества паяных и разъемных соединений и их герметизации;
-          li Тестирование режимов работы кондиционера.
-      div.ServiceInclude-Column
-        img(src="/uploaded/images/outer_cond.svg").ServiceInclude-ColumnImg
-        p.ServiceInclude-ColumnText
-          | Техническое обслуживание наружного блока включает в себя:
-        ol.ServiceInclude-ColumnList
-          li Осмотр блока электроники;
-          li Контроль холодильного контура на наличие хладагента, дозаправка в случае необходимости (в случае если потеря не превышает 20%);
-          li Проверка качества паяных и разъемных соединений и их герметизации;
-          li Очистка внешнего блока от внешних источников загрязнения (сухая либо влажная очистка под давлением от загрязнений конденсатора наружного блока);
-          li Обследование электрической контактной группы наружного блока;
-          li Тестирование режимов работы кондиционера при максимальной нагрузке.
+  +SectionAba({
+    headerText: 'Стоимость обслуживания кондиционера',
+    sectionLink: 'servicePrice',
+    classes: 'ServicePrice'
+  })
+    div.col-12.offset-lg-1.col-lg-10.ServicePrice-Offers
+      div.goods_hits
+        div.goods
+          a(href="/pages/Forma")
+            svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
+              use(xlink:href="/uploaded/images/icons.svg#homeCond", x="-41000")
+            span.name
+              | Настенная сплит система мощностью от 2 до 7 кВт
+          div.price
+            | 2 000&nbsp
+            span.rouble
+              | Р
+          a(href="/pages/Forma").buy
+            | Заказать
+        div.goods
+          a(href="/pages/Forma")
+            svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
+              use(xlink:href="/uploaded/images/icons.svg#promCond", x="-34600")
+            span.name
+              | Кассетные, универсальные, канальные, колонные сплит системы мощностью от 3,5 до 16 кВт
+          div.price
+            | 2 500&nbsp
+            span.rouble
+              | Р
+          a(href="/pages/Forma").buy
+            | Заказать
+        div.goods
+          a(href="/pages/Forma")
+            svg(viewBox="0 0 1500 2381.24").ServicePrice-OfferImg
+              use(xlink:href="/uploaded/images/icons.svg#mobCond", x="-38300")
+            span.name
+              | Мобильные кондиционеры
+          div.price
+            | 2 000&nbsp
+            span.rouble
+              | Р
+          a(href="/pages/Forma").buy
+            | Заказать
+  +SectionAba({
+    headerText: 'Что включает в себя обслуживание сплит систем?',
+    sectionLink: 'serviceInclude',
+    classes: 'SectionAba_border_none'
+  })
+    div.col-12.col-md-6.ServiceInclude-Column
+      img(src="/uploaded/images/inner_cond.svg").ServiceInclude-ColumnImg
+      p.ServiceInclude-ColumnText
+        | Техническое обслуживание внутреннего блока включает в себя:
+      ol.ServiceInclude-ColumnList
+        li Снятие, очистка и промывка фильтров внутренней рециркуляции;
+        li Очистка внутреннего блока от внешних источников загрязнения;
+        li Очистка крыльчатки вентилятора;
+        li Очистка поддона для сбора конденсата внутреннего блока;
+        li Очистка дренажного канала;
+        li Осушка по программе встроенного микропроцессора;
+        li Осмотр блока электроники;
+        li Проверка качества паяных и разъемных соединений и их герметизации;
+        li Тестирование режимов работы кондиционера.
+    div.col-12.col-md-6.ServiceInclude-Column
+      img(src="/uploaded/images/outer_cond.svg").ServiceInclude-ColumnImg
+      p.ServiceInclude-ColumnText
+        | Техническое обслуживание наружного блока включает в себя:
+      ol.ServiceInclude-ColumnList
+        li Осмотр блока электроники;
+        li Контроль холодильного контура на наличие хладагента, дозаправка в случае необходимости (в случае если потеря не превышает 20%);
+        li Проверка качества паяных и разъемных соединений и их герметизации;
+        li Очистка внешнего блока от внешних источников загрязнения (сухая либо влажная очистка под давлением от загрязнений конденсатора наружного блока);
+        li Обследование электрической контактной группы наружного блока;
+        li Тестирование режимов работы кондиционера при максимальной нагрузке.
+
 

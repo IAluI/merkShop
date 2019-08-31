@@ -88,8 +88,8 @@ block content
       p.SectionAba-Paragraph
         | Выберите схему расположения наружного блока:
     div.StdInstall-VariantsContainer
-      input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant1', value = '1')
-      input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant2', value = '2', checked)
+      input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant1', value = '1', checked)
+      input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant2', value = '2')
       input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant3', value = '3')
       div.StdInstall-VariantsSelect
         label(for = 'stdInstallVariant1')
@@ -475,7 +475,7 @@ block content
   +SectionAba({
     headerText: 'Купить кондиционер с установкой в одном месте — <span class="color_blue">это ВЫГОДНО</span>',
     sectionLink: 'buyAndInstall',
-    classes: 'SectionAba_border_none BuyAndInstall'
+    classes: 'borderColor_blue BuyAndInstall'
   })
     div.col-12.offset-md-6.col-md-6
       div.SectionAba-Bg
@@ -510,8 +510,8 @@ block content
         | приходится сразу менять либо ремонтировать некоторые детали.
         | Мы же предлагаем Вам только те бренды и модели, которые уже
         | проверены временем.
-    div.SectionAba-Footer
-      p
+    div.SectionAba-Footer.borderColor_blue
+      p.SectionAba-Paragraph
         | Наш совет — экономьте свои деньги, время и нервы с умом.
         | К тому же, стоимость установки кондиционера при покупке его в этом же месте
         |  — будет ниже, нежели заказывать монтаж и сплит систему в разных местах.
