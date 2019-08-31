@@ -4,7 +4,7 @@ include ../components/SectionAba/SectionAba.pug
 include ../components/CallbackSectionAba/CallbackSectionAba.pug
 
 block title
-  | Обслуживание и ремонт кондиционеров
+  | Проектирование
 
 block content
   nav.NavBarAba
@@ -34,7 +34,7 @@ block content
     sectionLink: 'engineering',
     classes: ''
   })
-    div.Engineering-Block1
+    div.col-12.offset-md-1.col-md-5.SectionAba-Column_maxWidth_35
       p.SectionAba-Paragraph
         | Наш производственный опыт позволяет делать качественные
         | и <strong>РЕАЛЬНЫЕ</strong> проекты.
@@ -42,7 +42,7 @@ block content
         | Поэтому проекты мы всегда выполняем с учетом планируемого
         | заказчиком бюджета на монтаж, а также удобства монтажа и
         | дальнейшей эксплуатации.
-    div.Engineering-Block2
+    div.col-12.col-md-5.SectionAba-Column_maxWidth_35
       div.SectionAba-Important
         div.Engineering-Block2Content
           span
@@ -57,19 +57,19 @@ block content
     classes: ''
   })
     div.SectionAba-SubSection
-      div.EngineeringPricing-Block1
+      div.col-12.offset-sm-1.col-sm-6.SectionAba-Column_maxWidth_35.EngineeringPricing-Block1
         p.SectionAba-Paragraph
           | Стоимость проектных работ напрямую зависит от трудоемкости
           | проектирования. То есть от того, на сколько много инженерных систем
-          | на условном 1м2 площади объекта. Например, стоимость промышленных
+          | на условном 1 м2 площади объекта. Например, стоимость промышленных
           | объектов, как правило, выше, чем жилых. Или стоимость вентиляции,
           | которая состоит из приточной и вытяжной системы выше, чем состоящей
           | только из вытяжной системы.
-      div.EngineeringPricing-Bg1
+      div.col-12.col-sm-5.EngineeringPricing-Bg1
         img(src = '/uploaded/images/air_duct_1.svg', alt = 'Воздуховоды').EngineeringPricing-Bg1Duct
-      div.EngineeringPricing-Bg2
+      div.col-12.col-sm-6.EngineeringPricing-Bg2
         img(src = '/uploaded/images/air_duct_2.svg', alt = 'Аспирация').EngineeringPricing-Bg2Duct
-      div.EngineeringPricing-Block2
+      div.col-12.col-sm-6.SectionAba-Column_maxWidth_35
         p.SectionAba-Paragraph
           | Так же стоимость проектных работ зависит от степени уникальности
           | Вашего объекта.  Типовое решение будет стоить дешевле (как правило,
@@ -79,13 +79,7 @@ block content
           | и, естественно, дороже. В таком случае готовьтесь отвечать на уйму
           | вопросов ;) (как правило, промышленная аспирация).
     div.SectionAba-SubSection
-      div.EngineeringPricing-Bg3
-        div.EngineeringPricing-Bg3Oval
-        img(src = '/uploaded/images/plate_1.svg', alt = 'Большая тарелка').EngineeringPricing-Bg3Plate1
-        span.EngineeringPricing-Bg3Question
-          | ?
-        img(src = '/uploaded/images/plate_2.svg', alt = 'Маленькая тарелка').EngineeringPricing-Bg3Plate2
-      div.EngineeringPricing-Block3
+      div.col-12.col-sm-7.offset-md-1.col-md-6.SectionAba-Column_maxWidth_35
         p.SectionAba-Paragraph
           | Из собственного опыта мы пришли к выводу, что оценивать стоимость
           | проектных работ по квадратуре объекта – не всегда корректно.
@@ -97,7 +91,13 @@ block content
           | оборудования в венткамере может быть настолько высока, что
           | проходить свободно сквозь это помещение у взрослого человека
           |  не получится.
-      div.EngineeringPricing-Block4
+      div.col-12.col-md-5.SectionAba-Column_maxWidth_35.EngineeringPricing-Bg3
+        div.EngineeringPricing-Bg3Oval
+        img(src = '/uploaded/images/plate_1.svg', alt = 'Большая тарелка').EngineeringPricing-Bg3Plate1
+        span.EngineeringPricing-Bg3Question
+          | ?
+        img(src = '/uploaded/images/plate_2.svg', alt = 'Маленькая тарелка').EngineeringPricing-Bg3Plate2
+      div.col-12.col-sm-7.offset-md-1.col-md-6.SectionAba-Column_maxWidth_35
         p.SectionAba-Paragraph
           | Еще мы должны знать, для каких целей Вам нужен проект.
           | И нужен ли вообще Вам проект в том представлении, в каком принято
@@ -110,7 +110,7 @@ block content
     sectionLink: 'engineeringPrice',
     classes: ''
   })
-    table
+    table.EngineeringPrice-Table
       tr
         th Наименование
         th Содержание
