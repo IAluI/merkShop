@@ -37,3 +37,7 @@ function swiperInit(options) {
 
   return mySwiper;
 }
+
+(function navSliders() {
+
+})();

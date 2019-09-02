@@ -53,7 +53,7 @@ const paths = {
   pug: {
     src: ["./src/pages/*.pug", "!./src/pages/{t,dt}_*.pug"],
     dist: "./dist/pages/",
-    watch: "./src/pages/p_*.pug"
+    watch: ["./src/pages/p_*.pug", "./src/components/**/*.pug"]
   },
   fonts: {
     src: "./src/fonts/**/*.{ttf,otf,woff,woff2}",
@@ -73,7 +73,7 @@ const paths = {
   styles: {
     src: ["./src/styles/libraries.scss", "./src/styles/main.scss", "./src/styles/site.scss", "./src/styles/p_*.scss"],
     dist: "./dist/styles/",
-    watch: "./src/styles/**/*.scss"
+    watch: ["./src/styles/**/*.scss", "./src/components/**/*.scss"]
   }
 };
 
