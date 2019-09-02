@@ -6,7 +6,7 @@ $(document).ready(function() {
     var id = $(this).attr('href');
     var top = $(id).offset().top;
     $('html, body').animate({
-      scrollTop: top
+      scrollTop: top - window.fixHeaderHight
     }, 350);
   });
 

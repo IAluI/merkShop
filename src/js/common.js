@@ -39,5 +39,36 @@ function swiperInit(options) {
 }
 
 (function navSliders() {
+  var navSwiper = new Swiper('.NavBarAba', {
+    grabCursor: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    freeMode: true,
+    slidesPerView: 'auto',
+  });
 
+  var navBar = $('.NavBarAba');
+  var navBarOffset = $('.NavBarAba').offset().top;
+  var navBarHeight = navBar.outerHeight();
+  window.fixHeaderHight = navBarHeight;
+  var isFixedPrev = false, isFixedCur = false;
+  $(window).scroll(function () {
+    isFixedCur = $(window).scrollTop() > navBarOffset;
+    if (isFixedCur === isFixedPrev) {
+      return;
+    }
+    isFixedPrev = isFixedCur;
+    if(isFixedCur) {
+      console.log('ok')
+      navBar.addClass('NavBarAba_fixed');
+      $('.SectionAba:first').css('margin-top', navBarHeight);
+      //$(html).css('padding-top', navBarHeight);
+    } else {
+      navBar.removeClass('NavBarAba_fixed');
+      $('.SectionAba:first').css('margin-top', 0);
+      //$(html).css('padding-top', 0);
+    }
+  });
 })();

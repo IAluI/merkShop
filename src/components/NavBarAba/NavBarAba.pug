@@ -1,3 +1,14 @@
+mixin NavBarAba(options)
+  - var {linkList} = options
+  nav.swiper-container.NavBarAba
+    div.swiper-wrapper
+      -for (var i = 0; i < linkList.length; i++)
+        div.swiper-slide
+          +NavBarAba-Link(linkList[i])
+    //- div.swiper-pagination
+    div.swiper-button-prev.swiper-button-black
+    div.swiper-button-next.swiper-button-black
+
 mixin NavBarAba-Link(options)
   - var {href, text, svgHref, viewBox, x = 0, y = 0} = options
   a(href = href).NavBarAba-Link
@@ -5,3 +16,12 @@ mixin NavBarAba-Link(options)
       use(xlink:href = svgHref, x = x, y = y)
     span.NavBarAba-LinkText
       | #{text}
+
+//- div.swiper-container
+  div.swiper-wrapper
+    div.swiper-slide
+    div.swiper-slide
+    div.swiper-slide
+  div.swiper-pagination
+  div.swiper-button-prev.swiper-button-black
+  div.swiper-button-next.swiper-button-black

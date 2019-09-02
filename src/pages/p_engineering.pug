@@ -7,7 +7,32 @@ block title
   | Проектирование
 
 block content
-  nav.NavBarAba
+  +NavBarAba({
+    linkList: [
+      {
+        href: '#engineering',
+        text: 'Проектирование систем кондиционирования и вентиляции',
+        svgHref: '/uploaded/images/icons.svg#engineering',
+        viewBox: '0 0 3100 2381.24',
+        x: '-44300'
+      },
+      {
+        href: '#engineeringPricing',
+        text: 'От чего зависит стоимость проектных работ?',
+        svgHref: '/uploaded/images/icons.svg#engineeringPricing',
+        viewBox: '0 0 3400 2381.24',
+        x: '-48500'
+      },
+      {
+        href: '#engineeringPrice',
+        text: 'Прайс на проектирование систем вентиляции и кондиционирования',
+        svgHref: '/uploaded/images/icons.svg#price',
+        viewBox: '0 0 1300 2381.24',
+        x: '-31600'
+      },
+    ],
+  })
+  //- nav.NavBarAba
     +NavBarAba-Link({
       href: '#engineering',
       text: 'Проектирование систем кондиционирования и вентиляции',

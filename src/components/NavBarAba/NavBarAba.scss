@@ -1,19 +1,40 @@
 .NavBarAba {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around;*/
   padding: {
     top: 1.5em;
     bottom: 1.5em;
   }
   border-bottom: solid 2px #e8e8e8;
+  background-color: white;
+  z-index: 1000;
+}
+
+.NavBarAba_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.NavBarAba .swiper-slide {
+  width: auto;
+  margin: 0 auto;
+}
+
+.NavBarAba .swiper-wrapper {
+  //justify-content: space-around;
 }
 
 .NavBarAba-Link {
+  display: inline-block;
+  max-width: 200px;
+
   //flex: 1 1 140px;
-  flex: 0 0 200px;
-  padding-bottom: 0.5em;
-  text-align: center;
+  //flex: 0 0 200px;
+  //padding-bottom: 0.5em;
+  //text-align: center;
   text-decoration: none;
   &:hover {
     //--icon-color: #30CBF2;
@@ -25,9 +46,9 @@
 }
 
 .NavBarAba-LinkImg {
-  display: block;
-  margin: auto;
-  margin-bottom: 0.5em;
+  //display: block;
+  //margin: auto;
+  //margin-bottom: 0.5em;
   height: 3.125em;
   //transition: 0.7s;
 }
@@ -37,6 +58,7 @@
   font-size: 0.875em;
   display: block;
   padding: 0 0.5em;
+  margin-top: 0.5em;
   margin: auto;
   //max-width: 17em;
 }
