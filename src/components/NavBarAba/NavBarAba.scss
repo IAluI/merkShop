@@ -30,6 +30,8 @@
 .NavBarAba-Link {
   display: inline-block;
   max-width: 200px;
+  border-bottom: solid 3px transparent;
+  transition: border-color 1s;
 
   //flex: 1 1 140px;
   //flex: 0 0 200px;
@@ -43,6 +45,10 @@
       animation: iconRotate  0.7s ease-in-out;
     }
   }
+}
+
+.NavBarAba-Link_active {
+  border-color: #00ccf4;
 }
 
 .NavBarAba-LinkImg {

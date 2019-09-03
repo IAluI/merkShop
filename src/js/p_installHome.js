@@ -1,28 +1,6 @@
 'use strict';
 
 $(document).ready(function() {
-  $('a[href^="#"]').click(function (e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-    var top = $(id).offset().top;
-    $('html, body').animate({
-      scrollTop: top
-    }, 350);
-  });
-
-  /*var installStepsSlider = new Swiper ('.InstallSteps-Slider', {
-    grabCursor: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 3,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });*/
-
   var installStepsSlider = swiperInit({
     mediaQ: '(min-width: 1230px)',
     swiperContainer: '.InstallSteps-Slider',

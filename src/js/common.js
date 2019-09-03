@@ -38,7 +38,22 @@ function swiperInit(options) {
   return mySwiper;
 }
 
-(function navSliders() {
+$(document).ready(function navSliders() {
+  /*
+    Плавный переход по ссылке внутри страницы
+   */
+  $('a[href^="#"]').click(function (e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+    var top = $(id).offset().top;
+    var header = $('.NavBarAba').outerHeight();
+    $('html, body').animate({
+      scrollTop: top - header
+    }, 350);
+  });
+  /*
+   Инициализация слайдера навигационного меню
+   */
   var navSwiper = new Swiper('.NavBarAba', {
     grabCursor: true,
     navigation: {
@@ -48,27 +63,54 @@ function swiperInit(options) {
     freeMode: true,
     slidesPerView: 'auto',
   });
+  /*
+   Трансформация позиционирования меню из статического в фиксированное
+   */
+  function fixNavBar() {
+    var navBar = $('.NavBarAba');
+    var navBarOffset = $('.NavBarAba').offset().top;
+    var navBarHeight = navBar.outerHeight();
+    var isFixedPrev = false, isFixedCur = false;
 
-  var navBar = $('.NavBarAba');
-  var navBarOffset = $('.NavBarAba').offset().top;
-  var navBarHeight = navBar.outerHeight();
-  window.fixHeaderHight = navBarHeight;
-  var isFixedPrev = false, isFixedCur = false;
-  $(window).scroll(function () {
-    isFixedCur = $(window).scrollTop() > navBarOffset;
-    if (isFixedCur === isFixedPrev) {
-      return;
-    }
-    isFixedPrev = isFixedCur;
-    if(isFixedCur) {
-      console.log('ok')
-      navBar.addClass('NavBarAba_fixed');
-      $('.SectionAba:first').css('margin-top', navBarHeight);
-      //$(html).css('padding-top', navBarHeight);
-    } else {
-      navBar.removeClass('NavBarAba_fixed');
-      $('.SectionAba:first').css('margin-top', 0);
-      //$(html).css('padding-top', 0);
-    }
-  });
+    return function () {
+      isFixedCur = $(window).scrollTop() > navBarOffset;
+      if (isFixedCur === isFixedPrev) {
+        return;
+      }
+      isFixedPrev = isFixedCur;
+      if(isFixedCur) {
+        console.log('ok')
+        navBar.addClass('NavBarAba_fixed');
+        $('.SectionAba:first').css('margin-top', navBarHeight);
+      } else {
+        navBar.removeClass('NavBarAba_fixed');
+        $('.SectionAba:first').css('margin-top', 0);
+      }
+    };
+  }
+
+  $(window).scroll($.throttle(250, false, fixNavBar()));
+
+  $('.NavBarAba-Link:first').addClass("NavBarAba-Link_active");
+  function highlightMenuItem() {
+    var winScroll = $(window).scrollTop();
+    var header = $('.NavBarAba').outerHeight();
+
+    $('.NavBarAba-Link').each(function(){
+      var hash = $(this).attr("href");
+      var target = $(hash);
+      if (target.offset().top - header <= winScroll && target.offset().top - header + target.outerHeight() > winScroll) {
+        $('.NavBarAba-Link_active').removeClass("NavBarAba-Link_active");
+        $(this).addClass("NavBarAba-Link_active");
+        return false;
+      }
+    });
+  }
+
+  $(window).scroll($.throttle(250, highlightMenuItem));
+
+});
+
+(function linkAnimate() {
+
 })();

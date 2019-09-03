@@ -1,7 +1,7 @@
 mixin SectionAba(options)
   - var {headerText, sectionLink, classes} = options
-  section(class = "SectionAba " + classes)
+  section(class = "SectionAba " + classes, id = sectionLink)
     h2.SectionAba-Header
-      a(name = sectionLink, id = sectionLink, href = "#" + sectionLink)
+      a(name = sectionLink, href = "#" + sectionLink)
         | !{headerText}
     block
