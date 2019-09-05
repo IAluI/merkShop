@@ -145,10 +145,76 @@
 
 .EngineeringPrice-Table {
   border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 1.5em;
 }
 
+.EngineeringPrice-Table th {
+  padding: 0.5em;
+}
+
+.EngineeringPrice-Table td {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.EngineeringPrice-Table_small tr:nth-child(4n+1) > td,
+.EngineeringPrice-Table_small tr:nth-child(4n+1) > th {
+  background-color: #eeeeee;
+}
+
+.EngineeringPrice-Table_small tr:nth-child(4n+2) > td,
+.EngineeringPrice-Table_small tr:nth-child(4n+2) > th {
+  background-color: #f6f6f6;
+}
+
+.EngineeringPrice-Table_small tr:nth-child(4n+1) > td[rowspan='2'],
+.EngineeringPrice-Table_small tr:nth-child(4n+1) > th[rowspan='2'] {
+  background-color: #dadada;
+}
+
+.EngineeringPrice-Table_small td[rowspan='2'] {
+  text-align: left;
+}
+
+.EngineeringPrice-Table_big {
+  display: none;
+}
+
+.EngineeringPrice-Table_big tr:nth-child(odd) > td,
+.EngineeringPrice-Table_big th {
+  background-color: #eeeeee;
+}
+
+.EngineeringPrice-Table_big tr > td:first-child,
+.EngineeringPrice-Table_big th:first-child {
+  background-color: #dadada;
+}
+
+.EngineeringPrice-Table_big tr > td:nth-child(1),
+.EngineeringPrice-Table_big tr > td:nth-child(2) {
+  text-align: left;
+}
+
+.EngineeringPrice-Table_big tr:nth-child(even) > td {
+  background-color: #fff;
+}
+
+
+@media (min-width: 576px) {
+  .EngineeringPrice-Table_small {
+    display: none;
+  }
+  .EngineeringPrice-Table_big {
+    display: table;
+  }
+}
+
+
+
+/*
 .EngineeringPrice-Table td,
 .EngineeringPrice-Table th {
   padding: 0.5em;
   border: 2px solid black;
-}
+}*/
