@@ -11,6 +11,10 @@
   border-bottom: none;
 }
 
+.SectionAba_overflow {
+  overflow: initial;
+}
+
 .SectionAba * {
   box-sizing: border-box;
 }
@@ -22,6 +26,7 @@
     size: 1.375em;
     weight: 700;
   };
+  line-height: 1.5em;
   padding: {
     top: 1.6363em;
     bottom: 1.6363em;

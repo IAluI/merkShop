@@ -246,68 +246,6 @@ block content
                 strong 8000 р.
                 strong 8500 р.
                 strong 8500 р.
-        //- table
-          thead
-            tr
-              th
-                | Мощность (холодопроизводительность) кондиционера
-              th
-                | Площадь помещения
-              th
-                | Стоимость установки
-          tbody
-            tr
-              td
-                | до 3,5 кВт
-              td
-                | до 35 м2
-              td.color_blue
-                strong 7500 р.
-            tr
-              td
-                | 3,5-5 кВт
-              td
-                | 35-50 м2
-              td.color_blue
-                strong 8000 р.
-            tr
-              td
-                | от 5 кВт
-              td
-                | более 50 м2
-              td.color_blue
-                strong 8500 р.
-        //- table
-          thead
-            tr
-              th
-                | Мощность (холодопроизводительность) кондиционера
-              th
-                | Площадь помещения
-              th
-                | Стоимость установки
-          tbody
-            tr
-              td
-                | до 3,5 кВт
-              td
-                | до 35 м2
-              td.color_blue
-                strong 7500 р.
-            tr
-              td
-                | 3,5-5 кВт
-              td
-                | 35-50 м2
-              td.color_blue
-                strong 8000 р.
-            tr
-              td
-                | от 5 кВт
-              td
-                | более 50 м2
-              td.color_blue
-                strong 8500 р.
   +SectionAba({
     headerText: 'Этапы монтажа кондиционера',
     sectionLink: 'installSteps',
@@ -318,61 +256,61 @@ block content
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-1.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Разметка под блоки кондииционера
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-2.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Прокладка межблочных комму- никаций (фреонопровод в  теплоизоляции, кабель, дренаж)
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-3.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Монтаж наружного  блока
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-4.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Монтаж внутреннего  блока
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-5.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Вальцевание
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-6.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Подключение межблочных  коммуникаций к блокам
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-7.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Монтаж пластикового  короба до 1 м для трасы
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-8.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Монтаж кабель-канала  до 2 м и подключение электропитания
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-9.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Вакуумирование трассы
         div.swiper-slide
           div.InstallSteps-Slide
             div.InstallSteps-SlideImg
-              img(src = '/uploaded/images/barnaul.svg', alt = 'Этап монтажа')
+              img(src = '/uploaded/images/installSteps-10.svg', alt = 'Этап монтажа')
             p.InstallSteps-SlideText
               | Проведение пуско-наладки и запуск оборудования
       div.swiper-pagination
@@ -471,7 +409,20 @@ block content
             | цена за полный монтаж по прайсу минус 2000 руб
           li
             | 2000 руб — на завершающие работы
-
+    div.swiper-container.TwoStepsInstall-Slider
+      div.swiper-wrapper
+        div.swiper-slide
+          div.TwoStepsInstall-Slide.TwoStepsInstall-Slide_number
+            img(src = '/uploaded/images/twoStepsInstall-1.svg', alt = 'Монтаж в два этапа')
+        div.swiper-slide
+          div.TwoStepsInstall-Slide
+            img(src = '/uploaded/images/twoStepsInstall-2.svg', alt = 'Монтаж в два этапа')
+        div.swiper-slide
+          div.TwoStepsInstall-Slide.TwoStepsInstall-Slide_number
+            img(src = '/uploaded/images/twoStepsInstall-3.svg', alt = 'Монтаж в два этапа')
+      div.swiper-pagination
+      div.swiper-button-prev.swiper-button-black
+      div.swiper-button-next.swiper-button-black
   +SectionAba({
     headerText: 'Купить кондиционер с установкой в одном месте — <span class="color_blue">это ВЫГОДНО</span>',
     sectionLink: 'buyAndInstall',
@@ -589,7 +540,7 @@ block content
   +SectionAba({
     headerText: 'Прайс на монтаж бытовых сплит-систем',
     sectionLink: 'price',
-    classes: 'SectionAba_border_none'
+    classes: 'SectionAba_border_none SectionAba_overflow'
   })
     table.Price-Table
       thead
@@ -720,13 +671,13 @@ block content
           td
             | Установка дренажной помпы для удаления конденсата
           td
-            | 1000-1500
+            | 1000-<wbr>1500
           td
-            | 1000-1500
+            | 1000-<wbr>1500
           td
-            | 1000-1500
+            | 1000-<wbr>1500
           td
-            | 1000-1500
+            | 1000-<wbr>1500
 
         tr
           td

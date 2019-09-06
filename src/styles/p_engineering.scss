@@ -116,13 +116,13 @@
   .EngineeringPricing-Bg3Plate1 {
     position: absolute;
     top: 20%;
-    left: -20%;
+    left: -10%;
     height: 10em;
 
   }
   .EngineeringPricing-Bg3Question {
     position: absolute;
-    left: 50%;
+    left: 30%;
     top: 50%;
     transform: translateY(-50%);
     font: {
@@ -132,7 +132,7 @@
   .EngineeringPricing-Bg3Plate2 {
     position: absolute;
     bottom: 5%;
-    left: 25%;
+    left: 15%;
     height: 7em;
   }
 }
@@ -158,48 +158,52 @@
   padding: 0.5em;
 }
 
-.EngineeringPrice-Table_small tr:nth-child(4n+1) > td,
-.EngineeringPrice-Table_small tr:nth-child(4n+1) > th {
-  background-color: #eeeeee;
-}
-
-.EngineeringPrice-Table_small tr:nth-child(4n+2) > td,
-.EngineeringPrice-Table_small tr:nth-child(4n+2) > th {
-  background-color: #f6f6f6;
-}
-
-.EngineeringPrice-Table_small tr:nth-child(4n+1) > td[rowspan='2'],
-.EngineeringPrice-Table_small tr:nth-child(4n+1) > th[rowspan='2'] {
-  background-color: #dadada;
-}
-
-.EngineeringPrice-Table_small td[rowspan='2'] {
-  text-align: left;
+.EngineeringPrice-Table_small {
+  tr:nth-child(4n+1) > td,
+  tr:nth-child(4n+1) > th {
+    background-color: #eeeeee;
+  }
+  tr:nth-child(4n+2) > td,
+  tr:nth-child(4n+2) > th {
+    background-color: #f6f6f6;
+  }
+  tr:nth-child(4n+1) > td[rowspan='2'],
+  tr:nth-child(4n+1) > th[rowspan='2'] {
+    background-color: #dadada;
+  }
+  td[rowspan='2'] {
+    text-align: left;
+    padding-left: 1em;
+  }
+  th:last-child,
+  td:last-child {
+    padding-right: 1em;
+  }
 }
 
 .EngineeringPrice-Table_big {
   display: none;
+  tr:nth-child(odd) > td,
+  th {
+    background-color: #eeeeee;
+  }
+  tr > td:first-child,
+  th:first-child {
+    background-color: #dadada;
+    padding-left: 1em;
+  }
+  tr > td:last-child,
+  th:last-child {
+    padding-right: 1em;
+  }
+  tr > td:nth-child(1),
+  tr > td:nth-child(2) {
+    text-align: left;
+  }
+  tr:nth-child(even) > td {
+    background-color: #fff;
+  }
 }
-
-.EngineeringPrice-Table_big tr:nth-child(odd) > td,
-.EngineeringPrice-Table_big th {
-  background-color: #eeeeee;
-}
-
-.EngineeringPrice-Table_big tr > td:first-child,
-.EngineeringPrice-Table_big th:first-child {
-  background-color: #dadada;
-}
-
-.EngineeringPrice-Table_big tr > td:nth-child(1),
-.EngineeringPrice-Table_big tr > td:nth-child(2) {
-  text-align: left;
-}
-
-.EngineeringPrice-Table_big tr:nth-child(even) > td {
-  background-color: #fff;
-}
-
 
 @media (min-width: 576px) {
   .EngineeringPrice-Table_small {
