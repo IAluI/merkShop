@@ -24,6 +24,12 @@
   };
   text-decoration: none;
   color: #000;
+  background-color: #fff;
   padding: 0.5em 3em;
   border: 2px solid #71e2ff;
+}
+
+.CallbackSectionAba-Link:hover {
+  color: #808080;
+  text-decoration: underline;
 }

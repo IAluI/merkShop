@@ -27,8 +27,10 @@ const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 // модуль для автоматической установки автопрефиксов
 const autoprefixer = require('gulp-autoprefixer');
-// модуль для минимизации JavaScript
+// модуль для минификации JavaScript
 const uglify = require('gulp-uglify');
+// модуль для минификации css
+const cssmin = require('gulp-minify-css')
 // плагин для сжатия PNG, JPEG, GIF и SVG изображений
 const imagemin = require('gulp-imagemin');
 // плагин для сжатия jpeg
@@ -178,9 +180,9 @@ gulp.task('images', () => {
 gulp.task('scripts', () => {
   return gulp.src(paths.scripts.src)
     .pipe(rigger())
-    .pipe(gulpIf(isDevelopment, sourcemaps.init()))
-    .pipe(gulpIf(isDevelopment, uglify()))
-    .pipe(gulpIf(isDevelopment, sourcemaps.write()))
+    //.pipe(gulpIf(isDevelopment, sourcemaps.init()))
+    //.pipe(gulpIf(!isDevelopment, uglify()))
+    //.pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulp.dest(paths.scripts.dist))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -191,6 +193,7 @@ gulp.task('styles', () => {
     .pipe(autoprefixer({
       browsers: autoprefixerList
     }))
+    //.pipe(gulpIf(!isDevelopment, cssmin()))
     .pipe(gulp.dest(paths.styles.dist))
     .pipe(browserSync.stream());
 });

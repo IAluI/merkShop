@@ -1,9 +1,9 @@
 // Вспомогательные стили
-@import "bGrid";
 @import "cmsStyleFix";
 // Стили компонентов
 @import '../components/NavBarAba/NavBarAba';
 @import '../components/SectionAba/SectionAba';
 @import '../components/CallbackSectionAba/CallbackSectionAba';
+@import '../components/ModalCallbackAba/ModalCallbackAba';
 // Общие стили проекта
 @import 'common';

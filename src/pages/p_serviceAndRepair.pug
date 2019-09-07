@@ -1,11 +1,13 @@
 extends t_main.pug
 include ../components/NavBarAba/NavBarAba.pug
 include ../components/SectionAba/SectionAba.pug
+include ../components/ModalCallbackAba/ModalCallbackAba.pug
 
 block title
   | Обслуживание и ремонт кондиционеров
 
 block content
+  +ModalCallbackAba()
   nav.NavBarAba
     +NavBarAba-Link({
       href: '#whyService',
@@ -114,7 +116,7 @@ block content
     div.col-12.offset-lg-1.col-lg-10.ServicePrice-Offers
       div.goods_hits
         div.goods
-          a(href="/pages/Forma")
+          a(onclick = 'window.formSettingsAba.mail_text = "Заявка на обслуживание настенной сплит системы мощностью от 2 до 7 кВт"').ModalCallbackAba-Call
             svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
               use(xlink:href="/uploaded/images/icons.svg#homeCond", x="-41000")
             span.name
@@ -123,10 +125,10 @@ block content
             | 2 000&nbsp
             span.rouble
               | Р
-          a(href="/pages/Forma").buy
+          a(onclick = 'window.formSettingsAba.mail_text = "Заявка на обслуживание настенной сплит системы мощностью от 2 до 7 кВт"').buy.ModalCallbackAba-Call
             | Заказать
         div.goods
-          a(href="/pages/Forma")
+          a(onclick = 'window.formSettingsAba.mail_text = "Заявка на обслуживание кассетной/универсальной/канальной/колонной сплит системы мощностью от 3,5 до 16 кВт"').ModalCallbackAba-Call
             svg(viewBox="0 0 2600 2381.24").ServicePrice-OfferImg
               use(xlink:href="/uploaded/images/icons.svg#promCond", x="-34600")
             span.name
@@ -135,10 +137,10 @@ block content
             | 2 500&nbsp
             span.rouble
               | Р
-          a(href="/pages/Forma").buy
+          a(onclick = 'window.formSettingsAba.mail_text = "Заявка на обслуживание кассетной/универсальной/канальной/колонной сплит системы мощностью от 3,5 до 16 кВт"').buy.ModalCallbackAba-Call
             | Заказать
         div.goods
-          a(href="/pages/Forma")
+          a(onclick = 'window.formSettingsAba.mail_text = "Заявка на обслуживание мобильного кондиционера"').ModalCallbackAba-Call
             svg(viewBox="0 0 1500 2381.24").ServicePrice-OfferImg
               use(xlink:href="/uploaded/images/icons.svg#mobCond", x="-38300")
             span.name
@@ -147,7 +149,7 @@ block content
             | 2 000&nbsp
             span.rouble
               | Р
-          a(href="/pages/Forma").buy
+          a(onclick = 'window.formSettingsAba.mail_text = "Заявка на обслуживание мобильного кондиционера"').buy.ModalCallbackAba-Call
             | Заказать
   +SectionAba({
     headerText: 'Что включает в себя обслуживание сплит систем?',

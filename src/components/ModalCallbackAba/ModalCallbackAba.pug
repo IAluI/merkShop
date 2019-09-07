@@ -1,0 +1,14 @@
+mixin ModalCallbackAba()
+  div.ModalCallbackAba-Background.ModalCallbackAba-Background_hidden
+    div.ModalCallbackAba-Window
+      form
+        div.ModalCallbackAba-Close
+          | X
+        h4.ModalCallbackAba-FormHeader
+          | Оставьте Ваши контактные данные:
+        input(type = "text", name = "Name", data-title = "Имя", placeholder = "Введите имя", required).ModalCallbackAba-FormData
+        input(type = "text", name = "City", data-title = "Город", placeholder = "Введите город", required).ModalCallbackAba-FormData
+        input(type = "tel", name = "Phone", data-title = "Номер телефона", placeholder = "Введите номер телефона", required).ModalCallbackAba-FormData
+        textarea(name="Message", data-title = "Текст", placeholder = "Введите сообщение").ModalCallbackAba-FormData
+        input(type = "submit", value = "Оставить заявку").ModalCallbackAba-Submit
+        div.ModalCallbackAba-Success

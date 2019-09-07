@@ -1,6 +1,12 @@
-'use strict';
-
 $(document).ready(function() {
+  /*
+    Запись в глобальный объект настроек формы
+   */
+  window.formSettingsAba = {
+    mail_subject: 'Заявка со страницы "Монтаж бытовых систем кондиционирования"',
+    mail_text: ''
+  };
+
   $('a[href^="#"]').click(function (e) {
     e.preventDefault();
     var id = $(this).attr('href');

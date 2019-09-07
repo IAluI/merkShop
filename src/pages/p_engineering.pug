@@ -2,11 +2,13 @@ extends t_main.pug
 include ../components/NavBarAba/NavBarAba.pug
 include ../components/SectionAba/SectionAba.pug
 include ../components/CallbackSectionAba/CallbackSectionAba.pug
+include ../components/ModalCallbackAba/ModalCallbackAba.pug
 
 block title
   | Проектирование
 
 block content
+  +ModalCallbackAba()
   nav.NavBarAba
     +NavBarAba-Link({
       href: '#engineering',
