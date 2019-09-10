@@ -104,7 +104,7 @@ gulp.task('pages', () => {
   return gulp.src(paths.pages.src)
     .pipe(rigger())
     .pipe(gulp.dest(paths.pages.dist))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.stream());
 });
 
 gulp.task('pugTemplate', () => {
@@ -150,7 +150,7 @@ gulp.task('pug', () => {
 gulp.task('fonts', () => {
   return gulp.src(paths.fonts.src)
     .pipe(gulp.dest(paths.fonts.dist))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.stream());
 });
 
 gulp.task('images', () => {
