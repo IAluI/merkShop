@@ -1,4 +1,4 @@
-.Container {
+.PageAba {
   width: 100%;
   min-width: 290px;
   font: {
@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 576px) {
-  .Container {
+  .PageAba {
     font: {
       size: 13px;
     }
@@ -17,7 +17,7 @@
 }
 
 @media (min-width: 768px) {
-  .Container {
+  .PageAba {
     font: {
       size: 14px;
     }
@@ -25,7 +25,7 @@
 }
 
 @media (min-width: 992px) {
-  .Container {
+  .PageAba {
     font: {
       size: 15px;
     }
@@ -33,7 +33,7 @@
 }
 
 @media (min-width: 1200px) {
-  .Container {
+  .PageAba {
     font: {
       size: 16px;
     }

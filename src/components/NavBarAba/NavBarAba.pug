@@ -1,3 +1,9 @@
+mixin NavBarAba(options)
+  - var {linkList} = options
+  nav.NavBarAba
+    -for (var i = 0; i < linkList.length; i++)
+      +NavBarAba-Link(linkList[i])
+
 mixin NavBarAba-Link(options)
   - var {href, text, svgHref, viewBox, x = 0, y = 0} = options
   a(href = href).NavBarAba-Link

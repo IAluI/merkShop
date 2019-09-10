@@ -8,34 +8,37 @@ block title
 
 block content
   +ModalCallbackAba()
-  nav.NavBarAba
-    +NavBarAba-Link({
-      href: '#whyService',
-      text: 'Зачем необходимо обслуживание кондиционера',
-      svgHref: '/uploaded/images/icons.svg#whyService',
-      viewBox: '0 0 3000 2381.24',
-      x: '-2900'
-    })
-    +NavBarAba-Link({
-      href: '#periodService',
-      text: 'Как часто нужно проводить чистку кондиционера',
-      svgHref: '/uploaded/images/icons.svg#periodService',
-      viewBox: '0 0 1853 2381.24'
-    })
-    +NavBarAba-Link({
-      href: '#servicePrice',
-      text: 'Зачем необходимо обслуживание кондиционера',
-      svgHref: '/uploaded/images/icons.svg#price',
-      viewBox: '0 0 1218 2381.24',
-      x: '-31635'
-    })
-    +NavBarAba-Link({
-      href: '#serviceInclude',
-      text: 'Что включает в себя обслуживание сплит систем',
-      svgHref: '/uploaded/images/icons.svg#serviceInclude',
-      viewBox: '0 0 4000 2381.24',
-      x: '-6500'
-    })
+  +NavBarAba({
+    linkList: [
+      {
+        href: '#whyService',
+        text: 'Зачем необходимо обслуживание кондиционера',
+        svgHref: '/uploaded/images/icons.svg#whyService',
+        viewBox: '0 0 3000 2381.24',
+        x: '-2900'
+      },
+      {
+        href: '#periodService',
+        text: 'Как часто нужно проводить чистку кондиционера',
+        svgHref: '/uploaded/images/icons.svg#periodService',
+        viewBox: '0 0 1853 2381.24'
+      },
+      {
+        href: '#servicePrice',
+        text: 'Стоимость обслуживания кондиционера',
+        svgHref: '/uploaded/images/icons.svg#price',
+        viewBox: '0 0 1300 2381.24',
+        x: '-31600'
+      },
+      {
+        href: '#serviceInclude',
+        text: 'Что включает в себя обслуживание сплит систем',
+        svgHref: '/uploaded/images/icons.svg#serviceInclude',
+        viewBox: '0 0 4000 2381.24',
+        x: '-6500'
+      },
+    ],
+  })
   +SectionAba({
     headerText: 'Зачем необходимо обслуживать кондиционер?',
     sectionLink: 'whyService',

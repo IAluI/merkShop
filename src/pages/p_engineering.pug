@@ -9,28 +9,31 @@ block title
 
 block content
   +ModalCallbackAba()
-  nav.NavBarAba
-    +NavBarAba-Link({
-      href: '#engineering',
-      text: 'Проектирование систем кондиционирования и вентиляции',
-      svgHref: '/uploaded/images/icons.svg#engineering',
-      viewBox: '0 0 3100 2381.24',
-      x: '-44300'
-    })
-    +NavBarAba-Link({
-      href: '#engineeringPricing',
-      text: 'От чего зависит стоимость проектных работ?',
-      svgHref: '/uploaded/images/icons.svg#engineeringPricing',
-      viewBox: '0 0 3400 2381.24',
-      x: '-48500'
-    })
-    +NavBarAba-Link({
-      href: '#engineeringPrice',
-      text: 'Прайс на проектирование систем вентиляции и кондиционирования',
-      svgHref: '/uploaded/images/icons.svg#price',
-      viewBox: '0 0 1218 2381.24',
-      x: '-31635'
-    })
+  +NavBarAba({
+    linkList: [
+      {
+        href: '#engineering',
+        text: 'Проектирование систем кондиционирования и вентиляции',
+        svgHref: '/uploaded/images/icons.svg#engineering',
+        viewBox: '0 0 3100 2381.24',
+        x: '-44300'
+      },
+      {
+        href: '#engineeringPricing',
+        text: 'От чего зависит стоимость проектных работ?',
+        svgHref: '/uploaded/images/icons.svg#engineeringPricing',
+        viewBox: '0 0 3400 2381.24',
+        x: '-48500'
+      },
+      {
+        href: '#engineeringPrice',
+        text: 'Прайс на проектирование систем вентиляции и кондиционирования',
+        svgHref: '/uploaded/images/icons.svg#price',
+        viewBox: '0 0 1300 2381.24',
+        x: '-31600'
+      },
+    ],
+  })
   +SectionAba({
     headerText: 'Проектирование',
     sectionLink: 'engineering',
@@ -93,7 +96,7 @@ block content
           | оборудования в венткамере может быть настолько высока, что
           | проходить свободно сквозь это помещение у взрослого человека
           |  не получится.
-      div.col-12.col-md-5.SectionAba-Column_maxWidth_35.EngineeringPricing-Bg3
+      div.SectionAba-Column_maxWidth_35.EngineeringPricing-Bg3
         div.EngineeringPricing-Bg3Oval
         img(src = '/uploaded/images/plate_1.svg', alt = 'Большая тарелка').EngineeringPricing-Bg3Plate1
         span.EngineeringPricing-Bg3Question

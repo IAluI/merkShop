@@ -9,49 +9,52 @@ block title
 
 block content
   +ModalCallbackAba
-  nav.NavBarAba
-    +NavBarAba-Link({
-      href: '#measurement',
-      text: 'Выезд на замер',
-      svgHref: '/uploaded/images/icons.svg#measurement',
-      viewBox: '0 0 2500 2381.24',
-      x: '-11000'
-    })
-    +NavBarAba-Link({
-      href: '#stdInstall',
-      text: 'Стандартный монтаж кондиционера',
-      svgHref: '/uploaded/images/icons.svg#stdInstall',
-      viewBox: '0 0 1800 2381.24',
-      x: '-14500'
-    })
-    +NavBarAba-Link({
-      href: '#unstdInstall',
-      text: 'НЕстандартный монтаж кондиционера',
-      svgHref: '/uploaded/images/icons.svg#unstdInstall',
-      viewBox: '0 0 2300 2381.24',
-      x: '-18300'
-    })
-    +NavBarAba-Link({
-      href: '#buyAndInstall',
-      text: 'Купить кондиционер с установкой в одном месте',
-      svgHref: '/uploaded/images/icons.svg#buyAndInstall',
-      viewBox: '0 0 3300 2381.24',
-      x: '-21800'
-    })
-    +NavBarAba-Link({
-      href: '#instalBySelf',
-      text: 'Установка кондиционера своими руками',
-      svgHref: '/uploaded/images/icons.svg#instalBySelf',
-      viewBox: '0 0 3200 2381.24',
-      x: '-26500'
-    })
-    +NavBarAba-Link({
-      href: '#price',
-      text: 'Прайс на услуги ',
-      svgHref: '/uploaded/images/icons.svg#price',
-      viewBox: '0 0 1300 2381.24',
-      x: '-31600'
-    })
+  +NavBarAba({
+    linkList: [
+      {
+        href: '#measurement',
+        text: 'Выезд на замер',
+        svgHref: '/uploaded/images/icons.svg#measurement',
+        viewBox: '0 0 2500 2381.24',
+        x: '-11000'
+      },
+      {
+        href: '#stdInstall',
+        text: 'Стандартный монтаж кондиционера',
+        svgHref: '/uploaded/images/icons.svg#stdInstall',
+        viewBox: '0 0 1800 2381.24',
+        x: '-14500'
+      },
+      {
+        href: '#unstdInstall',
+        text: 'НЕстандартный монтаж кондиционера',
+        svgHref: '/uploaded/images/icons.svg#unstdInstall',
+        viewBox: '0 0 2300 2381.24',
+        x: '-18300'
+      },
+      {
+        href: '#buyAndInstall',
+        text: 'Купить кондиционер с установкой в одном месте',
+        svgHref: '/uploaded/images/icons.svg#buyAndInstall',
+        viewBox: '0 0 3300 2381.24',
+        x: '-21800'
+      },
+      {
+        href: '#instalBySelf',
+        text: 'Установка кондиционера своими руками',
+        svgHref: '/uploaded/images/icons.svg#instalBySelf',
+        viewBox: '0 0 3200 2381.24',
+        x: '-26500'
+      },
+      {
+        href: '#price',
+        text: 'Прайс на услуги ',
+        svgHref: '/uploaded/images/icons.svg#price',
+        viewBox: '0 0 1300 2381.24',
+        x: '-31600'
+      },
+    ],
+  })
   +SectionAba({
     headerText: 'Выезд на замер',
     sectionLink: 'measurement',
