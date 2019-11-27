@@ -8,7 +8,7 @@ block title
   | Монтаж бытовых систем кондиционирования
 
 block content
-  +ModalCallbackAba
+  +ModalCallbackAba()
   +NavBarAba({
     linkList: [
       {
@@ -60,7 +60,7 @@ block content
     sectionLink: 'measurement',
     classes: ''
   })
-    //div.SectionAba-Bg
+    //- div.SectionAba-Bg
       img(src = '/uploaded/images/blue_clouds.svg', alt = 'Облака')
     div.col-12.col-md-6.offset-lg-1.col-lg-5.SectionAba-Column_maxWidth_35
       p.SectionAba-Paragraph
@@ -96,7 +96,7 @@ block content
       input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant1', value = '1', checked)
       input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant2', value = '2')
       input(type = 'radio', name = 'stdInstallVariant', id = 'stdInstallVariant3', value = '3')
-      div.StdInstall-VariantsSelect
+      div.StdInstall-VariantsChoose
         label(for = 'stdInstallVariant1')
           | "ПОД ОКНО"
         label(for = 'stdInstallVariant2')
@@ -431,7 +431,7 @@ block content
   +SectionAba({
     headerText: 'Купить кондиционер с установкой в одном месте — <span class="color_blue">это ВЫГОДНО</span>',
     sectionLink: 'buyAndInstall',
-    classes: 'borderColor_blue BuyAndInstall'
+    classes: ' borderColor_blue'
   })
     div.col-12.offset-md-6.col-md-6
       div.SectionAba-Bg
@@ -545,7 +545,7 @@ block content
   +SectionAba({
     headerText: 'Прайс на монтаж бытовых сплит-систем',
     sectionLink: 'price',
-    classes: 'SectionAba_border_none SectionAba_overflow'
+    classes: ' SectionAba_border_none SectionAba_overflow'
   })
     table.Price-Table
       thead

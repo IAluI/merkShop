@@ -3,11 +3,11 @@
   margin-bottom: 1.5em;
 }
 
-.StdInstall-VariantsSelect {
+.StdInstall-VariantsChoose {
   display: flex;
 }
 
-.StdInstall-VariantsSelect > label {
+.StdInstall-VariantsChoose > label {
   flex: 1 1 auto;
   cursor: pointer;
   text-align: center;
@@ -295,7 +295,7 @@
 
 .Price-Table {
   border-collapse: collapse;
-  margin: 0 -15px;
+  margin: 0 -10px;
   tr:nth-child(odd) {
     background-color: #eeeeee;
   }

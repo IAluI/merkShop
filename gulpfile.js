@@ -68,13 +68,13 @@ const paths = {
     watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg}"
   },
   scripts: {
-    src: ["./src/js/libraries.js", "./src/js/main.js", "./src/js/p_*.js"],
-    dist: "./dist/js/",
+    src: ["./src/js/libraries.js", "./src/js/localLib.js", "./src/js/main.js", "./src/js/p_*.js"],
+    dist: "./dist/uploaded/files/js/",
     watch: "./src/js/**/*.js"
   },
   styles: {
     src: ["./src/styles/libraries.scss", "./src/styles/main.scss", "./src/styles/site.scss", "./src/styles/p_*.scss"],
-    dist: "./dist/styles/",
+    dist: "./dist/uploaded/files/css/",
     watch: ["./src/styles/**/*.scss", "./src/components/**/*.scss"]
   }
 };
@@ -181,7 +181,7 @@ gulp.task('scripts', () => {
   return gulp.src(paths.scripts.src)
     .pipe(rigger())
     //.pipe(gulpIf(isDevelopment, sourcemaps.init()))
-    //.pipe(gulpIf(!isDevelopment, uglify()))
+    .pipe(gulpIf(!isDevelopment, uglify()))
     //.pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulp.dest(paths.scripts.dist))
     .pipe(browserSync.reload({ stream: true }));
@@ -193,7 +193,7 @@ gulp.task('styles', () => {
     .pipe(autoprefixer({
       browsers: autoprefixerList
     }))
-    //.pipe(gulpIf(!isDevelopment, cssmin()))
+    .pipe(gulpIf(!isDevelopment, cssmin()))
     .pipe(gulp.dest(paths.styles.dist))
     .pipe(browserSync.stream());
 });

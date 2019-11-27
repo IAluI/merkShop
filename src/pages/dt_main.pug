@@ -3,35 +3,25 @@ html(lang='ru')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width', initial-scale='1', shrink-to-fit='no')
-    script(type='text/javascript', src='../js/libraries.js')
-    link(rel='stylesheet', type='text/css', href='../styles/site.css')
-    link(rel='stylesheet', type='text/css', href='../styles/libraries.css')
-    //- Интеграция стилей в режими разработки
-    if _isDevelopment_
-      link(rel='stylesheet', type='text/css', href='../styles/main.css')
-      link(rel='stylesheet', type='text/css', href='../styles/' + _nameMask_ + '.css')
+    link(rel='stylesheet', type='text/css', href='/uploaded/files/css/site.css')
+    script(type='text/javascript', src='/uploaded/files/js/localLib.js')
     title
       block title
-body
-  main(id='content')
-    div.container.clear
-      div.container
-        h1
-          block title
-        div.PageAba
-          //- Интеграция стилей в режими продакшена
-          if !_isDevelopment_
-            style(type='text/css')
-              include ../../dist/styles/main.css
-              include= ../../dist/styles/$nameMask$.css
 
-          block content
+  body
+    main(id='content')
+      div.container.clear
+        div.container
+          h1(style='display:none', itemprop='name')
+            block title
+          div.PageAba
+            link(rel='stylesheet', type='text/css', href='/uploaded/files/css/libraries.css')
+            link(rel='stylesheet', type='text/css', href='/uploaded/files/css/main.css')
+            link(rel='stylesheet', type='text/css', href='/uploaded/files/css/' + _nameMask_ + '.css')
 
-          //- Интеграция скрипта в зависимости от режима
-          if _isDevelopment_
-            script(type='text/javascript', src='../js/main.js')
-            script(type='text/javascript', src='../js/' + _nameMask_ + '.js')
-          else
-            script(type='text/javascript')
-              include ../../dist/js/main.js
-              include= ../../dist/js/$nameMask$.js
+            block content
+
+            script(type='text/javascript', src='/uploaded/files/js/libraries.js')
+            script(type='text/javascript', src='/uploaded/files/js/main.js')
+            script(type='text/javascript', src='/uploaded/files/js/' + _nameMask_ + '.js')
+
