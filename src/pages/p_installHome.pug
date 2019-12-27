@@ -230,27 +230,27 @@ block content
               td
                 | до 35 м2
               td.color_blue
-                strong 7000 р.
-                strong 7500 р.
-                strong 7500 р.
+                strong.InstallPrice_power_up3kw_type_wind
+                strong.InstallPrice_power_up3kw_type_balc
+                strong.InstallPrice_power_up3kw_type_wall
             tr
               td
                 | 3,5-5 кВт
               td
                 | 35-50 м2
               td.color_blue
-                strong 7500 р.
-                strong 8000 р.
-                strong 8000 р.
+                strong.InstallPrice_power_3to5kw_type_wind
+                strong.InstallPrice_power_3to5kw_type_balc
+                strong.InstallPrice_power_3to5kw_type_wall
             tr
               td
                 | от 5 кВт
               td
                 | более 50 м2
               td.color_blue
-                strong 8000 р.
-                strong 8500 р.
-                strong 8500 р.
+                strong.InstallPrice_power_more5kw_type_wind
+                strong.InstallPrice_power_more5kw_type_balc
+                strong.InstallPrice_power_more5kw_type_wall
   +SectionAba({
     headerText: 'Этапы монтажа кондиционера',
     sectionLink: 'installSteps',
@@ -821,3 +821,6 @@ block content
     header: null,
     description: 'Определиться, сколько нужно материалов и какие требуются  виды работ вам поможет специалист при замере.'
   })
+
+block addScript
+  script(type="text/javascript", src="/uploaded/files/js/goodDesc.js")
