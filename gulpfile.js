@@ -89,17 +89,6 @@ gulp.task('clean', () => {
   ]);
 });
 
-const autoprefixerList = [
-  'Chrome >= 45',
-  'Firefox ESR',
-  'Edge >= 12',
-  'Explorer >= 10',
-  'iOS >= 9',
-  'Safari >= 9',
-  'Android >= 4.4',
-  'Opera >= 30'
-];
-
 gulp.task('pages', () => {
   return gulp.src(paths.pages.src)
     .pipe(rigger())
@@ -190,9 +179,7 @@ gulp.task('scripts', () => {
 gulp.task('styles', () => {
   return gulp.src(paths.styles.src)
     .pipe(sass())
-    .pipe(autoprefixer({
-      browsers: autoprefixerList
-    }))
+    .pipe(autoprefixer())
     .pipe(gulpIf(!isDevelopment, cssmin()))
     .pipe(gulp.dest(paths.styles.dist))
     .pipe(browserSync.stream());

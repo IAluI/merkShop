@@ -1,0 +1,31 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width', initial-scale='1', shrink-to-fit='no')
+    link(rel='stylesheet', type='text/css', href='/uploaded/files/css/site.css')
+    script(type='text/javascript', src='/uploaded/files/js/localLib.js')
+    title
+      block title
+
+  body
+    main(id='content')
+      div.container.clear
+        div.container
+          h1(style='display:none', itemprop='name')
+            block title
+          div.PageAba
+            link(rel='stylesheet', type='text/css', href='/uploaded/files/css/libraries.css')
+            link(rel='stylesheet', type='text/css', href='/uploaded/files/css/main.css')
+            link(rel='stylesheet', type='text/css', href='/uploaded/files/css/' + _nameMask_ + '.css')
+
+            block addCss
+
+            block content
+
+            script(type='text/javascript', src='/uploaded/files/js/libraries.js')
+            script(type='text/javascript', src='/uploaded/files/js/main.js')
+            script(type='text/javascript', src='/uploaded/files/js/' + _nameMask_ + '.js')
+
+            block addScript
+
